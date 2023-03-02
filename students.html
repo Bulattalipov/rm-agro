@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="preload" href="assets/fonts/Oniks.otf" as="font" crossorigin="anonymous">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Заголовок">
+        <meta property="og:description" content="Описание">
+        <meta property="og:url" content="https://example.com/">
+        <meta property="og:image" content="https://via.placeholder.com/350x150">
+        <meta property="og:site_name" content="Бренд или имя сайта">
+        <meta property="og:locale" content="ru_RU">
+        <link rel="stylesheet" href="css/styles.min.css">
+        <link rel="stylesheet" href="assets/backend/backend.css">
+        <title></title>
+    </head>
+    <body class="no-touch white" ontouchstart="">
+        <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <symbol viewBox="0 0 18 18" fill="none" id="album-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.188 4.57h-2.391l-.57-1.596a.563.563 0 00-.53-.372H6.304c-.238 0-.45.149-.53.372l-.57 1.596H2.812c-.777 0-1.407.63-1.407 1.407v8.015c0 .777.63 1.406 1.407 1.406h12.374c.777 0 1.407-.629 1.407-1.406V5.977c0-.777-.63-1.407-1.407-1.407zM9 12.586A2.812 2.812 0 119 6.96a2.812 2.812 0 110 5.625zM7.312 9.773a1.688 1.688 0 103.376 0 1.688 1.688 0 00-3.376 0z" fill="#F2F2F2" />
+                </symbol>
+                <symbol viewBox="0 0 51 60" fill="none" id="arrow-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M48.422 34.493L7.86 58.487C4.418 60.522 0 58.06 0 53.957V5.969C0 1.874 4.411-.596 7.86 1.445L48.422 25.44a5.162 5.162 0 011.887 1.91 5.291 5.291 0 010 5.233 5.162 5.162 0 01-1.887 1.91z" fill="#fff" />
+                </symbol>
+                <symbol viewBox="0 0 24 24" fill="none" id="clip-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity=".8" d="M6.046 20c-.762 0-1.494-.308-2.077-.878a3.207 3.207 0 010-4.595L14.048 4.07c1.572-1.54 3.98-1.401 5.739.319.787.77 1.23 1.882 1.213 3.05-.017 1.157-.48 2.263-1.27 3.037l-7.616 7.924a.57.57 0 01-.794.024.542.542 0 01-.024-.778l7.629-7.936c.596-.585.939-1.413.951-2.286.013-.872-.31-1.695-.884-2.258-1.078-1.056-2.833-1.608-4.139-.33L4.775 15.294a2.124 2.124 0 00-.011 3.05c.401.392.877.583 1.384.553.501-.03 1.017-.281 1.452-.707l8.018-8.34c.291-.285.875-.983.28-1.565-.336-.33-.572-.31-.65-.303-.222.019-.482.17-.751.433l-6.036 6.273a.57.57 0 01-.794.023.541.541 0 01-.023-.777L13.69 7.65c.476-.466.962-.72 1.457-.763.386-.033.96.047 1.546.621.869.852.76 2.1-.269 3.108l-8.019 8.34c-.64.628-1.413.993-2.188 1.04a2.57 2.57 0 01-.171.005z" fill="#FBFBFB" />
+                </symbol>
+                <symbol viewBox="0 0 22 22" fill="none" id="close-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21L1 1m0 20L21 1 1 21z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </symbol>
+                <symbol viewBox="0 0 33 32" fill="none" id="link-arrow-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 31L32 1m0 0H1m31 0v30" stroke="currentColor" stroke-width="3" />
+                </symbol>
+                <symbol viewBox="0 0 24 24" fill="none" id="long-slider-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.75 21L2 12l8.75-9M22 12H2h20z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </symbol>
+                <symbol viewBox="0 0 88 22" fill="none" id="mark-weber" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_92_15271)" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor">
+                        <path d="M47.312 5.327c.212.221 2.117 5.497 2.316 6.148.198.698.479 1.367.834 1.993.66.156.722-.534.922-1.081 1.083-2.957 2.726-7.268 3.548-10.173.573-1.407.622-1.785-.41-1.785-1.034 0-.922.704-1.333 1.616-.361 1.732-1.756 5.392-2.266 7.072 0 .222 0 .222-.262.222-.859-2.501-1.855-5.562-2.826-8.037-.261-.482-.722-.586-1.033.495-.523 1.72-1.245 3.764-1.806 5.432 0 0-.672 2.11-.722 2.214a6.684 6.684 0 01-.772-1.94c-.772-1.994-1.444-4.143-2.104-6.136-.162-.377-.162-.599-.523-.82a2.065 2.065 0 00-1.133-.105c-1.02.17-.36 1.03-.15 1.668 1.246 3.504 2.628 7.71 4.01 11.045a.506.506 0 00.153.21.474.474 0 00.481.067.489.489 0 00.2-.16c.2-.403 2.727-7.945 2.876-7.945z" />
+                        <path d="M.2.649c-.052.217-.035.446.049.651.212.912-.411 11.306-.25 11.723a2.389 2.389 0 001.607.157c.249-.274.15-.534.15-.964 0-1.837.149-3.608.149-5.497.062-.704.112-1.185.112-1.615 0-.43 0-.378.1-.482.099-.104 1.73 2.865 1.892 3.191.311.638.921 1.615 1.332 2.37.623 1.186.934.378 1.083.105.361-.482 3.15-5.601 3.35-5.705.186.208.186 5.327.186 5.705 0 2.8-.311 3.074 1.382 2.957.523 0 .573-.43.523-.912V9.48a129.162 129.162 0 01-.236-7.268c0-.273.1-1.302.1-1.459a.998.998 0 00-.586-.34.97.97 0 00-.66.119c-.36.221-.46.703-.722 1.029C8.715 3.5 7.308 5.703 6.325 7.539c-.361.652-.361.43-.673 0C4.98 6.51 4.11 4.74 3.498 3.71L2.253 1.56a4.474 4.474 0 00-.66-1.028C1.246.272.56.48.2.649z" />
+                        <path d="M65.898 6.68c.441-.376.964-.632 1.522-.746a3.303 3.303 0 011.678.095c1.644.756 1.855 3.296 1.133 4.533-.307.482-.75.853-1.268 1.06a2.566 2.566 0 01-1.62.1 3.652 3.652 0 01-1.445-.652V6.68zm0-1.836a38.994 38.994 0 010-4.26c0-.586-.199-.69-.722-.481-1.245.547-1.245.325-1.07 1.51.099.6 0 7.542 0 8.52 0 1.927-.262 2.37 2.415 3.177a5.529 5.529 0 002.313.013 5.644 5.644 0 002.132-.937c2.627-2.254 1.905-8.61-2.889-8.128a9.194 9.194 0 00-1.245.156c-.162.052-.772.43-.846.43h-.088z" />
+                        <path d="M29.592 13.142c.195-.68.25-1.394.162-2.098a16.042 16.042 0 010-2.214c.149 0 .31.274.622.6.311.325 2.876 3.125 3.287 3.438.143.14.316.242.504.298.189.057.387.066.58.028.36 0 .933 0 1.132-.26 0-.379-.722-.978-1.033-1.303-.311-.326-.71-.743-1.07-1.186a22.525 22.525 0 01-2.217-2.357c0-.118 2.826-2.605 3.35-3.074.198-.222.41-.274.36-.6a3.196 3.196 0 00-1.967 0c-.249.118-1.955 1.733-2.415 2.163-.15.156-1.034 1.133-1.133 1.08-.15-.494 0-7.228-.1-7.606-.1-.378-1.855.221-1.805.873.097.457.147.925.15 1.393v9.314c0 .325-.1 1.302.111 1.458a3.3 3.3 0 001.482.053z" />
+                        <path d="M16.178 8.725c.573-.156 2.49.325 2.577.86.05.576.05 1.156 0 1.732-.36.482-2.838 1.446-3.66-.274a1.893 1.893 0 010-1.563c.12-.198.278-.368.464-.498.187-.13.398-.218.62-.257zm2.627-.651a4.4 4.4 0 00-1.593-.69 5.649 5.649 0 00-2.117.156 2.826 2.826 0 00-1.463 1.04 3.044 3.044 0 00-.585 1.748 3.052 3.052 0 00.523 1.768c.35.516.85.9 1.425 1.097a4.51 4.51 0 003.038 0c.212-.105.623-.378.772-.43.15-.052.212.377.411.482.2.104 1.133 0 1.394-.26.262-.261.312-.222.15-.6a2.806 2.806 0 01-.25-1.615V6.888a2.362 2.362 0 00-.36-1.563c-.984-2.045-6.91-1.237-6.437.495.473 1.733 1.245-.599 3.86-.273 1.407.156 1.257 1.563 1.257 2.527h-.025z" />
+                        <path d="M79.756 7.815h-4.27c.057-.534.29-1.032.66-1.406.403-.37.91-.594 1.444-.639.278-.024.558.011.824.103.265.092.51.238.72.431.21.182.378.414.486.677.108.263.155.549.136.834zM75.374 9.21c.31-.156 4.98 0 5.827 0 .846 0 .46-2.905-1.084-4.09a4.016 4.016 0 00-4.432-.365 4.261 4.261 0 00-1.67 1.676 4.524 4.524 0 00-.559 2.35c-.03.798.148 1.59.514 2.292a4.345 4.345 0 001.566 1.693c1.382.977 5.092.925 5.552-.586.573-1.94-.771-.86-1.245-.651-.398.17-.817.28-1.245.325-2.751.326-3.424-2.214-3.224-2.644z" />
+                        <path d="M56.685 7.814a2.268 2.268 0 01.677-1.454c.392-.378.906-.59 1.44-.59 1.07-.118 2.315.859 2.104 2.044h-4.221zm-.212 1.303h5.777c.672 0 .56-.43.51-.964a4.316 4.316 0 00-.624-2.034 4.071 4.071 0 00-1.504-1.446 3.853 3.853 0 00-1.99-.48 3.87 3.87 0 00-1.957.612 4.31 4.31 0 00-1.57 1.717 4.557 4.557 0 00-.485 2.321 4.23 4.23 0 00.493 2.284c.374.694.934 1.259 1.612 1.624 1.755 1.133 5.204.651 5.515-.638 0-.378.25-1.303-.311-1.082-.677.4-1.414.678-2.179.821a2.98 2.98 0 01-1.22-.083 3.06 3.06 0 01-1.096-.568c-.448-.378-1.17-1.511-.97-2.084z" />
+                        <path d="M84.437 13.193c.311-.325.261-.482.261-.964v-1.302c0-1.72-.311-4.572 1.594-5.002.41-.104.51.26 1.033.156.309-.29.54-.657.673-1.068 0-.82-1.245-.977-2.378-.443-.361.17-.66.756-.922.808 0-.482.1-.69-.211-1.12-.4.04-.786.169-1.133.378-.51.26-.61.26-.51.911.099.652 0 5.12 0 6.187.049 1.629.049 1.576 1.593 1.46z" />
+                        <path d="M23.73 13.141v-.104c.145-1.323.183-2.656.113-3.986 0-1.029.249-2.696 1.332-3.022.872-.325.921.534 1.494 0 1.332-1.459-.46-2.045-1.544-1.563-1.083.482-.933.86-1.245.964a2.725 2.725 0 010-.638c0-.274-.112-.274-.211-.43-.4-.003-.792.11-1.133.326-.51.208-.673.26-.51.911a19.8 19.8 0 01.099 3.01v2.97c.112 1.614-.1 1.731 1.606 1.562z" />
+                        <path d="M46.951 14.876a27.048 27.048 0 00-6.026 1.498c-.61.273-1.245.43-1.855.703-1.245.482-2.415.912-3.648 1.407-.41.156-3.35 1.068-3.86 1.185-2.49.638-6.225 1.394-8.603.26-1.133-.586-1.245 1.238 1.332 1.89a10.07 10.07 0 004.532-.21c1.245-.273 2.74-.755 3.922-1.132 1.183-.378 2.578-.808 3.86-1.186.311-.117.56-.221.921-.325l1.905-.6c.361-.104.623-.26.934-.377l1.967-.482c.361-.105.623-.209.934-.326a35.765 35.765 0 017.93-.86c.66 0 1.644.17 2.317.274 1.245.156.97-.534.149-.977a12.558 12.558 0 00-6.71-.742z" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_92_15271">
+                            <path fill="#fff" d="M0 0h88v22H0z" />
+                        </clipPath>
+                    </defs>
+                </symbol>
+                <symbol viewBox="0 0 8 14" fill="none" id="slider-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 1L1 7l6 6" stroke="currentColor" stroke-linecap="round" />
+                </symbol>
+            </svg>
+        </div>
+        <div class="page-content">
+            <div class="loader loader--img">
+                <img class="loader__img" src="img/loader-logo.png">
+            </div>
+            <style>
+                .loader {
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2000;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    background-color: #395937;
+                }
+
+                .loader--img {
+                    background-color: #E5E2DB;
+                }
+
+                .loader__img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+
+                    width: 18.7rem;
+                    height: 12.3rem;
+
+                    transition: transform .4s ease .4s, visibility 0s linear .8s;
+                }
+
+                .loader__text {
+                    position: absolute;
+                    top: 19.3rem;
+                    left: 5rem;
+
+                    padding-top: 0.5rem;
+
+                    clip-path: inset(0 0 0 0);
+                    overflow: hidden;
+
+                    font: 400 46rem/90% 'Oniks';
+                    color: #fff;
+
+                    transition: clip-path 1s ease;
+                }
+
+                .loader__text.hide {
+                    clip-path: inset(0 100% 0 0);
+                }
+
+                .loader__largest-number {
+                    position: relative;
+
+                    opacity: 1;
+                    visibility: hidden;
+
+                    font: 400 46rem/90% 'Oniks';
+                }
+
+                @media (max-width: 1024px) {
+
+                    .loader__text,
+                    .loader__largest-number {
+                        font-size: 25rem;
+                    }
+
+                    .loader__img {
+                        width: 15rem;
+                        height: 10.5rem;
+                    }
+                }
+
+                @media (max-width: 640px) {
+
+                    .loader__text,
+                    .loader__largest-number {
+                        font-size: 15rem;
+                    }
+
+                    .loader__img {
+                        width: 11.8rem;
+                        height: 9rem;
+                    }
+                }
+
+                @media (max-width: 350px) {
+
+                    .loader__text,
+                    .loader__largest-number {
+                        font-size: 12rem;
+                    }
+                }
+
+                .loader__number-block {
+                    position: relative;
+
+                    display: inline-flex;
+                    justify-content: flex-end;
+                }
+
+                .loader__number {
+                    position: absolute;
+                    top: 0;
+                    transform: translateY(110%);
+                    right: 0;
+
+                    transition: 0.3s;
+                }
+
+                .loader__number.active {
+                    transform: translateY(0%);
+                    top: 0;
+                    transition: 0.3s;
+                }
+
+                .loader__number.hide {
+                    top: 0;
+                    transform: translateY(-110%);
+                    transition: 0.3s;
+                }
+
+                .disable-scroll {
+                    overflow: hidden;
+                    height: 100vh;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                }
+
+                .animatable .loader--img {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity .4s ease .4s, visibility 0s linear .8s;
+                }
+
+                .animatable .loader__img {
+                    transform: translate(-50%, -50%) scale(1.2);
+                }
+
+                .loader.hide {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity .4s ease .4s, visibility 0s linear .8s;
+                }
+            </style>
+            <div class="header-container">
+
+                <header class="header header--dark">
+                    <div class="container">
+                        <div class="header__wrapper">
+                            <a class="header__logo" href="index.html">
+                                <img src="img/logo.png" alt="Логотип РМ Агро">
+                            </a>
+                            <nav class="header__nav">
+                                <div class="header__column">
+                                    <ul class="header__menu">
+                                        <li class="header__menu-item">
+                                            <a class="header__menu-link" href="sausages.html">Каталог</a>
+                                        </li>
+                                        <li class="header__menu-item">
+                                            <a class="header__menu-link" href="directions.html">Направления деятельности</a>
+                                        </li>
+                                    </ul>
+                                    <button class="header__burger" type="button"></button>
+                                </div>
+                                <div class="header__column">
+                                    <ul class="header__menu">
+                                        <li class="header__menu-item">
+                                            <a class="header__menu-link" href="about.html">О холдинге</a>
+                                        </li>
+                                        <li class="header__menu-item">
+                                            <a class="header__menu-link" href="contacts.html">Контакты</a>
+                                        </li>
+                                    </ul>
+                                    <a class="header__phone border-button" href="tel:+79061201515">+7 906 120-15-15</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+                <div class="header__burger-nav">
+                    <div class="container">
+                        <div class="header__burger-nav-wrapper">
+                            <ul class="header__burger-multi-menu">
+                                <li class="header__burger-multi-menu-item">
+                                    <h3 class="header__burger-multi-menu-title">Направления деятельности</h3>
+                                    <ul class="header__burger-submenu">
+                                        <li class="header__burger-submenu-item">
+                                            <a class="header__burger-submenu-link" href="directions-single.html">растениеводство</a>
+                                        </li>
+                                        <li class="header__burger-submenu-item">
+                                            <a class="header__burger-submenu-link" href="directions-single.html">животноводство</a>
+                                        </li>
+                                        <li class="header__burger-submenu-item">
+                                            <a class="header__burger-submenu-link" href="directions-single.html">молочное производство</a>
+                                        </li>
+                                        <li class="header__burger-submenu-item">
+                                            <a class="header__burger-submenu-link" href="directions-single.html">производство колбас и деликатесов</a>
+                                        </li>
+                                        <li class="header__burger-submenu-item">
+                                            <a class="header__burger-submenu-link" href="directions-single.html">забой скота</a>
+                                        </li>
+                                        <li class="header__burger-submenu-item">
+                                            <a class="header__burger-submenu-link" href="directions-single.html">ГРК «Апрель»</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="header__burger-multi-menu-item">
+                                    <h3 class="header__burger-multi-menu-title">Каталог</h3>
+                                    <ul class="header__burger-submenu">
+                                        <li class="header__burger-submenu-item">
+                                            <a class="header__burger-submenu-link" href="sausages.html">колбасные изделия</a>
+                                        </li>
+                                        <li class="header__burger-submenu-item">
+                                            <a class="header__burger-submenu-link" href="meat.html">Мясное производство</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="header__burger-menu">
+                                <li class="header__burger-menu-item">
+                                    <a class="header__burger-menu-link" href="about.html">О холдинге</a>
+                                </li>
+                                <li class="header__burger-menu-item">
+                                    <a class="header__burger-menu-link" href="news.html">новости и акции</a>
+                                </li>
+                                <li class="header__burger-menu-item">
+                                    <a class="header__burger-menu-link" href="career.html">работа в рм-агро</a>
+                                </li>
+                                <li class="header__burger-menu-item">
+                                    <a class="header__burger-menu-link" href="media.html">медиагалерея</a>
+                                </li>
+                                <li class="header__burger-menu-item">
+                                    <a class="header__burger-menu-link" href="awards.html">награды и сертификаты</a>
+                                </li>
+                                <li class="header__burger-menu-item">
+                                    <a class="header__burger-menu-link" href="contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                            <div class="header__burger-contacts">
+                                <div class="header__burger-contacts-top">
+                                    <a class="header__burger-mail" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                                    <ul class="socials">
+                                        <li class="socials__item">
+                                            <a href="#">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect class="icon-bg" width="32" height="32" rx="7" fill="#395937" />
+                                                    <path class="icon" d="M8.00321 24L9.08481 20.0256C8.37212 18.8039 7.99769 17.4144 8.00001 16C8.00001 11.5816 11.5816 8 16 8C20.4184 8 24 11.5816 24 16C24 20.4184 20.4184 24 16 24C14.5862 24.0023 13.1973 23.6281 11.976 22.916L8.00321 24ZM13.1128 12.2464C13.0095 12.2528 12.9085 12.28 12.816 12.3264C12.7292 12.3755 12.65 12.437 12.5808 12.5088C12.4848 12.5992 12.4304 12.6776 12.372 12.7536C12.0763 13.1384 11.9173 13.6107 11.92 14.096C11.9216 14.488 12.024 14.8696 12.184 15.2264C12.5112 15.948 13.0496 16.712 13.7608 17.42C13.932 17.5904 14.0992 17.7616 14.2792 17.9208C15.1619 18.698 16.2138 19.2584 17.3512 19.5576L17.8064 19.6272C17.9544 19.6352 18.1024 19.624 18.2512 19.6168C18.4842 19.6048 18.7117 19.5417 18.9176 19.432C19.0224 19.378 19.1246 19.3193 19.224 19.256C19.224 19.256 19.2584 19.2336 19.324 19.184C19.432 19.104 19.4984 19.0472 19.588 18.9536C19.6544 18.8848 19.712 18.804 19.756 18.712C19.8184 18.5816 19.8808 18.3328 19.9064 18.1256C19.9256 17.9672 19.92 17.8808 19.9176 17.8272C19.9144 17.7416 19.8432 17.6528 19.7656 17.6152L19.3 17.4064C19.3 17.4064 18.604 17.1032 18.1792 16.9096C18.1344 16.8901 18.0864 16.879 18.0376 16.8768C17.9829 16.8712 17.9276 16.8773 17.8754 16.8949C17.8232 16.9124 17.7754 16.9409 17.7352 16.9784V16.9768C17.7312 16.9768 17.6776 17.0224 17.0992 17.7232C17.066 17.7678 17.0203 17.8015 16.9678 17.82C16.9154 17.8386 16.8587 17.8411 16.8048 17.8272C16.7527 17.8133 16.7016 17.7956 16.652 17.7744C16.5528 17.7328 16.5184 17.7168 16.4504 17.6872L16.4464 17.6856C15.9887 17.4858 15.565 17.2159 15.1904 16.8856C15.0896 16.7976 14.996 16.7016 14.9 16.6088C14.5853 16.3074 14.311 15.9664 14.084 15.5944L14.0368 15.5184C14.0029 15.4673 13.9755 15.4122 13.9552 15.3544C13.9248 15.2368 14.004 15.1424 14.004 15.1424C14.004 15.1424 14.1984 14.9296 14.2888 14.8144C14.3641 14.7187 14.4343 14.6191 14.4992 14.516C14.5936 14.364 14.6232 14.208 14.5736 14.0872C14.3496 13.54 14.1176 12.9952 13.8792 12.4544C13.832 12.3472 13.692 12.2704 13.5648 12.2552C13.5216 12.2504 13.4784 12.2456 13.4352 12.2424C13.3278 12.2371 13.2201 12.2381 13.1128 12.2456V12.2464Z" fill="#EAE5E1" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="socials__item">
+                                            <a href="#">
+                                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect class="icon-bg" width="32" height="32" rx="7" fill="#395937" />
+                                                    <path class="icon" d="M22.785 8.1052L6.84049 14.6219C5.75234 15.0851 5.75863 15.7285 6.64085 16.0154L10.7344 17.3689L20.2058 11.0352C20.6537 10.7464 21.0629 10.9017 20.7265 11.2182L13.0528 18.5584L12.7705 23.0315C13.1841 23.0315 13.3667 22.8304 13.5987 22.5931L15.5871 20.5438L19.7229 23.7817C20.4855 24.2268 21.0332 23.998 21.2229 23.0334L23.9379 9.47202C24.2158 8.29107 23.5126 7.75635 22.785 8.1052Z" fill="#EAE5E1" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header__burger-contacts-bottom">
+                                    <div class="header__burger-contacts-phone-block">
+                                        <h4 class="header__burger-contacts-phone-title">Отдел кадров</h4>
+                                        <a class="header__burger-contacts-phone" href="tel:+78556335448">+7 (85563) 3-54-48</a>
+                                    </div>
+                                    <div class="header__burger-contacts-phone-block">
+                                        <h4 class="header__burger-contacts-phone-title">Отдел продаж</h4>
+                                        <a class="header__burger-contacts-phone" href="tel:+79061201515">+7 906 120-15-15</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <main class="page-main">
+                <section class="students">
+                    <div class="container">
+                        <div class="breadcrumbs swiper js-init-slider" data-slides="auto">
+                            <div class="swiper-wrapper">
+                                <div class="breadcrumbs__item swiper-slide">
+                                    <a href="index.html">Главная</a>
+                                </div>
+                                <div class="breadcrumbs__item swiper-slide">
+                                    <a href="career.html">Карьера</a>
+                                </div>
+                                <div class="breadcrumbs__item swiper-slide active">
+                                    <a href="students.html">Обучение молодых специалистов</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-container">
+                        <div class="img-container__img">
+                            <img class="img-container__photo lazyload" data-src="img/news-single-1.jpg" alt="Фото церемонии">
+                        </div>
+                    </div>
+                    <div class="narrow-container">
+                        <h1>Студентам и выпускникам</h1>
+                    </div>
+                    <div class="text-container">
+                        <div class="text-lead">
+                            <p>В Группе «РМ-Агро» разработаны программы, позволяющие молодым специалистам адаптироваться в новом коллективе, раскрыть свой профессиональный потенциал и приобщиться к корпоративной культуре и ценностям</p>
+                        </div>
+                        <p>Передовиков поздравил заместитель министра сельского хозяйства и продовольствия Республики Татарстан Рашит Хабипов. Он передал слова глубокой благодарности труженикам сельского хозяйства района от имени заместителя Премьер-министра — министра сельского хозяйства и продовольствия РТ Марата Зяббарова.</p>
+                        <p>В адрес работников группы компаний РМ прозвучали искренние слова благодарности за высоко организованную работу и за добросовестное отношение к труду. Мероприятие сопровождалось концертными номерами.</p>
+                        <h2>Загловок 1</h2>
+                        <p>Генеральный директор группы компаний «РМ АГРО» Рифат Мутигуллин выступил на расширенном заседание коллегии Министерства сельского хозяйства и продовольствия Республики Татарстан</p>
+                        <blockquote class="blockquote">
+                            <div class="blockquote__top">
+                                <div class="blockquote__img">
+                                    <img class="blockquote__photo lazyload" data-src="img/director.jpg" alt="Директор">
+                                </div>
+                                <div class="blockquote__text">
+                                    <p>РМ Агро — компания, где можно начать или продолжить карьерный путь</p>
+                                </div>
+                            </div>
+                            <div class="blockquote__author">
+                                <cite class="blockquote__author-name">Мутигуллин Рифат Махмутович</cite><span class="blockquote__author-position">Генеральный директор РМ Агро</span>
+                            </div>
+                        </blockquote>
+                        <h3>Загловок 2</h3>
+                        <p>На празднике урожая передовикам труда были вручены государственные награды, медали, благодарственные письма, дипломы и почётные грамоты</p>
+                        <a class="img" data-src="img/news-single-2.jpg" data-fancybox>
+                            <img class="lazyload" data-src="img/news-single-2.jpg" alt="Фото">
+                        </a>
+                        <h3>Заголовок 2</h3>
+                        <p>На празднике урожая передовикам труда были вручены государственные награды, медали, благодарственные письма, дипломы и почётные грамоты</p>
+                        <ul>
+                            <li>Были нарушены правила хранения, транспортировки, установки или эксплуатации изделия</li>
+                            <li>Изделие имеет механические повреждения</li>
+                            <li>Изделие ремонтировалось или подвергалось модификации не в условиях официального СЦ</li>
+                            <li>Неисправность изделия вызвана стихийными бедствиями, пожарами, бытовыми или другими факторами, не зависящими от действий изготовителя</li>
+                        </ul>
+                        <a class="video" data-src="https://youtu.be/e-Y7jWF1ATo" data-fancybox>
+                            <div class="video__block">
+                                <button class="video-button" type="button"><span class="video-button__text">3 мин &nbsp; 3 мин &nbsp; 3 мин &nbsp; 3 мин &nbsp; 3 мин &nbsp; 3 мин &nbsp; 3 мин &nbsp; 3 мин &nbsp; 3 мин &nbsp; .</span>
+                                </button>
+                                <img class="video__preview lazyload" data-src="img/news-single-5.jpg" alt="Видео о РМ Агро">
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                <section class="resume">
+                    <div class="container">
+                        <div class="resume__inner">
+                            <div class="resume__title-wrapper">
+                                <h2 class="resume__title">отправьте резюме</h2>
+                            </div>
+                            <div class="resume__wrapper">
+                                <form class="resume__form js-handle-form" action="#" data-need-validation="true" novalidate>
+                                    <div class="resume__form-wrapper">
+                                        <div class="resume__input-wrapper input-wrapper">
+                                            <input class="resume__input input" name="resumeName" id="resumeName" type="text" required>
+                                            <label for="resumeName">Имя</label>
+                                        </div>
+                                        <div class="resume__input-wrapper input-wrapper">
+                                            <input class="resume__input input" name="resumeMail" id="resumeMail" type="email" required>
+                                            <label for="resumeMail">Ваша почта</label>
+                                        </div>
+                                        <div class="resume__input-wrapper input-wrapper">
+                                            <input class="resume__input input js-phone-input" name="resumePhone" id="resumePhone" type="tel" required>
+                                            <label for="resumePhone">номер телефона</label>
+                                        </div>
+                                        <div class="resume__file-wrapper input-wrapper js-input-file-container">
+                                            <input class="resume__file js-input-file visually-hidden" name="resumeFile" id="resumeFile" type="file" tabindex="-1">
+                                            <label class="resume__file-label label-file" for="resumeFile"><span class="resume__file-desc"><svg><use xlink:href="#clip-icon"></use></svg><span class="js-input-file-desc">Прикрепите свое резюме</span>
+                                                </span><span class="resume__file-name js-input-file-name"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="resume__checkbox-block">
+                                        <div class="resume__checkbox-wrapper">
+                                            <input class="resume__checkbox checkbox" name="resumeCheckbox" id="resumeCheckbox" type="checkbox" required>
+                                            <label for="resumeCheckbox"><span>Согласен на обработку<a href="#" download>&nbsp;персональных данных</a></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button class="resume__button button button--white js-submit-form" type="submit"><span>отправить</span>
+                                        <svg>
+                                            <use xlink:href="#link-arrow-icon"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                                <div class="resume__content">
+                                    <div class="resume__text">
+                                        <p>Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу команду</p>
+                                    </div>
+                                    <div class="resume__links">
+                                        <a class="resume__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                        <a class="resume__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__wrapper">
+                        <a class="footer__logo" href="index.html">
+                            <img class="lazyload" data-src="img/logo.png" alt="Логотип РМ Агро">
+                        </a>
+                        <div class="footer__content">
+                            <div class="footer__row">
+                                <ul class="footer__menu">
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="sausages.html">Каталог</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="news.html">новости и акции</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="contacts.html">Контакты</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="media.html">медиагалерея</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="about.html">О холдинге</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="awards.html">награды и сертификаты</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="career.html">работа в рм-агро</a>
+                                    </li>
+                                    <li class="footer__menu-item">
+                                        <a class="footer__menu-link" href="directions.html">направления деятельности</a>
+                                    </li>
+                                </ul>
+                                <ul class="footer__mobile-menu">
+                                    <li class="footer__mobile-menu-item">
+                                        <a class="footer__mobile-menu-link" href="#">Каталог</a>
+                                    </li>
+                                    <li class="footer__mobile-menu-item">
+                                        <a class="footer__mobile-menu-link" href="#">направления деятельности</a>
+                                    </li>
+                                </ul>
+                                <div class="footer__contacts">
+                                    <address class="footer__address">422191, РТ, Мамадыш, ул. Дачная, д. 15</address>
+                                    <div class="footer__contacts-footer">
+                                        <ul class="socials">
+                                            <li class="socials__item">
+                                                <a href="#">
+                                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect class="icon-bg" width="32" height="32" rx="7" fill="#395937" />
+                                                        <path class="icon" d="M8.00321 24L9.08481 20.0256C8.37212 18.8039 7.99769 17.4144 8.00001 16C8.00001 11.5816 11.5816 8 16 8C20.4184 8 24 11.5816 24 16C24 20.4184 20.4184 24 16 24C14.5862 24.0023 13.1973 23.6281 11.976 22.916L8.00321 24ZM13.1128 12.2464C13.0095 12.2528 12.9085 12.28 12.816 12.3264C12.7292 12.3755 12.65 12.437 12.5808 12.5088C12.4848 12.5992 12.4304 12.6776 12.372 12.7536C12.0763 13.1384 11.9173 13.6107 11.92 14.096C11.9216 14.488 12.024 14.8696 12.184 15.2264C12.5112 15.948 13.0496 16.712 13.7608 17.42C13.932 17.5904 14.0992 17.7616 14.2792 17.9208C15.1619 18.698 16.2138 19.2584 17.3512 19.5576L17.8064 19.6272C17.9544 19.6352 18.1024 19.624 18.2512 19.6168C18.4842 19.6048 18.7117 19.5417 18.9176 19.432C19.0224 19.378 19.1246 19.3193 19.224 19.256C19.224 19.256 19.2584 19.2336 19.324 19.184C19.432 19.104 19.4984 19.0472 19.588 18.9536C19.6544 18.8848 19.712 18.804 19.756 18.712C19.8184 18.5816 19.8808 18.3328 19.9064 18.1256C19.9256 17.9672 19.92 17.8808 19.9176 17.8272C19.9144 17.7416 19.8432 17.6528 19.7656 17.6152L19.3 17.4064C19.3 17.4064 18.604 17.1032 18.1792 16.9096C18.1344 16.8901 18.0864 16.879 18.0376 16.8768C17.9829 16.8712 17.9276 16.8773 17.8754 16.8949C17.8232 16.9124 17.7754 16.9409 17.7352 16.9784V16.9768C17.7312 16.9768 17.6776 17.0224 17.0992 17.7232C17.066 17.7678 17.0203 17.8015 16.9678 17.82C16.9154 17.8386 16.8587 17.8411 16.8048 17.8272C16.7527 17.8133 16.7016 17.7956 16.652 17.7744C16.5528 17.7328 16.5184 17.7168 16.4504 17.6872L16.4464 17.6856C15.9887 17.4858 15.565 17.2159 15.1904 16.8856C15.0896 16.7976 14.996 16.7016 14.9 16.6088C14.5853 16.3074 14.311 15.9664 14.084 15.5944L14.0368 15.5184C14.0029 15.4673 13.9755 15.4122 13.9552 15.3544C13.9248 15.2368 14.004 15.1424 14.004 15.1424C14.004 15.1424 14.1984 14.9296 14.2888 14.8144C14.3641 14.7187 14.4343 14.6191 14.4992 14.516C14.5936 14.364 14.6232 14.208 14.5736 14.0872C14.3496 13.54 14.1176 12.9952 13.8792 12.4544C13.832 12.3472 13.692 12.2704 13.5648 12.2552C13.5216 12.2504 13.4784 12.2456 13.4352 12.2424C13.3278 12.2371 13.2201 12.2381 13.1128 12.2456V12.2464Z" fill="#EAE5E1" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                            <li class="socials__item">
+                                                <a href="#">
+                                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect class="icon-bg" width="32" height="32" rx="7" fill="#395937" />
+                                                        <path class="icon" d="M22.785 8.1052L6.84049 14.6219C5.75234 15.0851 5.75863 15.7285 6.64085 16.0154L10.7344 17.3689L20.2058 11.0352C20.6537 10.7464 21.0629 10.9017 20.7265 11.2182L13.0528 18.5584L12.7705 23.0315C13.1841 23.0315 13.3667 22.8304 13.5987 22.5931L15.5871 20.5438L19.7229 23.7817C20.4855 24.2268 21.0332 23.998 21.2229 23.0334L23.9379 9.47202C24.2158 8.29107 23.5126 7.75635 22.785 8.1052Z" fill="#EAE5E1" />
+                                                    </svg>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <a class="footer__phone" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__row">
+                                <p class="footer__confidence">© 2011-2019 ООО "РМ АГРО"<a class="link link--black" href="#">Политика конфиденциальности</a>
+                                </p>
+                                <a class="footer__developer" href="#"><span>Сайт разработан</span>
+                                    <svg>
+                                        <use xlink:href="#mark-weber"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <style>
+                .ie-placeholder {
+                    z-index: 4000;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #202020;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+                }
+
+                .ie-placeholder__message {
+                    font-size: 2rem;
+                    line-height: 1.2;
+                    font-weight: 500;
+                    margin: auto;
+                }
+
+                @supports (display: grid) {
+                    .ie-placeholder {
+                        display: none;
+                    }
+                }
+            </style>
+            <div class="ie-placeholder">
+                <div class="ie-placeholder__message">Извините, ваш браузер не поддерживается</div>
+            </div>
+            <div class="modal js-modal" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">X</button>
+                        <div class="modal__content"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-success js-modal js-modal-success" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <h3 class="modal-success__title">Ваша заявка успешно отправлена!</h3>
+                        <button class="modal-success__button button button--white js-close-modal">закрыть</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-product js-modal js-modal-product" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <div class="modal-product__body">
+                            <div class="modal-product__img"></div>
+                            <div class="modal-product__content">
+                                <div class="modal-product__main-info">
+                                    <h3 class="modal-product__title">колбаса сырокопчёная охлаждённая «миланская»</h3>
+                                    <div class="modal-product__desc">
+                                        <p>Мясной продукт категории А, колбасное изделие, колбаса сыро-копчёная, охлаждённая</p>
+                                    </div>
+                                </div>
+                                <div class="modal-product__property">
+                                    <h4 class="modal-product__property-title">Энергетическая ценность на&nbsp;100&nbsp;г&nbsp;продукта:</h4>
+                                    <ul class="modal-product__property-list">
+                                        <li class="modal-product__property-item"><span class="modal-product__property">Калорийность</span><span class="modal-product__property-value">419ккал/1754кДж</span>
+                                        </li>
+                                        <li class="modal-product__property-item"><span class="modal-product__property">Белок</span><span class="modal-product__property-value">17 г</span>
+                                        </li>
+                                        <li class="modal-product__property-item"><span class="modal-product__property">Жир</span><span class="modal-product__property-value">39 г</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="modal-product__guarantee-list"></ul>
+                                    <div class="modal-product__guarantee-desc">
+                                        <p>Срок годности и условия хранения при температуре от 0 до +6°С и относительной влажности 75–78%,упакованных в вакуум — 30 суток, после вскрытия упаковки — 72 часа в пределах общего срока годности при аналогичных условиях хранения</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-product__footer">
+                            <h4 class="modal-product__footer-title">Варианты сервировки</h4>
+                            <div class="modal-product__slider-container">
+                                <div class="modal-product__slider swiper">
+                                    <div class="swiper-wrapper"></div>
+                                </div>
+                                <div class="slider-navigation slider-navigation--white js-slider-navigation">
+                                    <button class="slider-navigation__button js-prev-slide">
+                                        <svg>
+                                            <use xlink:href="#long-slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="slider-navigation__button js-next-slide">
+                                        <svg>
+                                            <use xlink:href="#long-slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-menu js-modal js-modal-menu" id="">
+                <div class="modal__container">
+                    <div class="modal__inner-container">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <div class="modal__inner">
+                            <div class="modal-menu__content-block">
+                                <h3 class="modal-menu__title">субпродукты</h3>
+                                <ul class="modal-menu__list">
+                                    <li class="modal-menu__item"><span>Наименование</span><span>вес</span><span>ед.изм</span><span>ср. вес единицы</span><span>Стандарт</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-menu__content-block">
+                                <h3 class="modal-menu__title">халяль</h3>
+                                <ul class="modal-menu__list">
+                                    <li class="modal-menu__item"><span>Наименование</span><span>вес</span><span>ед.изм</span><span>ср. вес единицы</span><span>Стандарт</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="modal-menu__content-block">
+                                <h3 class="modal-menu__title">вырезка</h3>
+                                <ul class="modal-menu__list">
+                                    <li class="modal-menu__item"><span>Наименование</span><span>вес</span><span>ед.изм</span><span>ср. вес единицы</span><span>Стандарт</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-gallery js-modal js-modal-gallery" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <div class="modal-gallery__slider-container">
+                            <div class="modal-gallery__slider swiper">
+                                <div class="swiper-wrapper"></div>
+                                <div class="slider-navigation slider-navigation--white js-slider-navigation">
+                                    <button class="slider-navigation__button js-prev-slide">
+                                        <svg>
+                                            <use xlink:href="#long-slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="slider-navigation__button js-next-slide">
+                                        <svg>
+                                            <use xlink:href="#long-slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="modal-gallery__title">«Весенне-полевые работы 2021 года»</h3>
+                        <a class="modal-gallery__download" href target="_blank"><span>Скачать<span>&nbsp;фотографию</span>
+                            </span>
+                            <img class="lazyload" data-src="img/download-icon.svg" alt="Иконка скачивания">
+                        </a><span class="modal-gallery__size">5 мб JPG</span>
+                        <div class="modal-gallery__sub-slider-container">
+                            <div class="modal-gallery__sub-slider swiper">
+                                <div class="swiper-wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const loader = document.querySelector('.loader');
+                const text = document.querySelector('.loader__text');
+                const numberDisplay = document.querySelector('.loader__number');
+                const numberBlock = document.querySelector('.loader__number-block');
+                let timerId;
+                let count = 5;
+
+                if (text) {
+                    disableScroll();
+                    repositionText();
+                    timerId = setInterval(moveUpNumber, 500);
+                }
+
+                function disableScroll() {
+                    lockPadding();
+                    window.scrollY = 0;
+                    document.body.classList.add('disable-scroll');
+                }
+
+                function enableScroll() {
+                    unlockPadding();
+                    window.srollY = 'auto';
+                    document.body.classList.remove('disable-scroll');
+                }
+
+                function lockPadding() {
+                    let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+                    document.body.style.paddingRight = paddingOffset;
+                }
+
+                function unlockPadding() {
+                    document.body.style.paddingRight = '0px';
+                }
+
+                function repositionText() {
+                    const introTitle = document.querySelector('.intro__title');
+                    if (!introTitle) return;
+                    let topPadding = 0;
+
+                    if (document.documentElement.clientWidth <= 768) topPadding = 10;
+                    if (document.documentElement.clientWidth <= 640) topPadding = 20;
+
+                    text.style.left = introTitle.getBoundingClientRect().left + 'px';
+                    text.style.top = introTitle.getBoundingClientRect().top + topPadding + 'px';
+                }
+
+                function moveUpNumber() {
+                    const newNumber = document.createElement('span');
+                    const hideNumber = document.querySelector('.loader__number.hide');
+                    const activeNumber = document.querySelector('.loader__number.active:not(.hide)');
+                    const number = document.querySelector('.loader__number:not(.active):not(.hide)');
+
+                    if (numberDisplay.classList.contains('loaded')) {
+                        clearInterval(timerId);
+                        if (text.closest('.animatable')) {
+                            setTimeout(loaderHide, 500);
+                            setTimeout(enableScroll, 1500);
+                        }
+                    }
+
+                    count += 9;
+
+                    if (text.closest('.animatable')) {
+                        newNumber.innerHTML = '100';
+                        numberDisplay.classList.add('loaded');
+                    } else {
+                        if (count >= 85) {
+                            count = 85;
+                            newNumber.innerHTML = count;
+                            return
+                        }
+                        newNumber.innerHTML = count;
+                    }
+
+
+                    if (hideNumber) hideNumber.remove();
+
+                    if (activeNumber) activeNumber.classList.add('hide');
+
+                    if (number) number.classList.add('active');
+
+                    newNumber.classList.add('loader__number');
+                    numberBlock.append(newNumber);
+                }
+
+                function loaderHide() {
+                    text.classList.add('hide');
+                    setTimeout(() => {
+                        loader.classList.add('hide')
+                        window.initIntroAnimation();
+                    }, 600);
+                }
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <div class="js-map-url" data-api="ваш API-ключ"></div>
+            <script src="js/app.js"></script>
+            <script src="assets/backend/backend.js"></script>
+        </div>
+
+    </body>
+</html>
