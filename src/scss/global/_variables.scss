@@ -1,0 +1,99 @@
+:root {
+  /* Colors */
+  --accent-color: #395937;
+  --bg-color: #E5E2DB;
+  --light-bg-color: #F2F2F2;
+  --stroke-color: rgba(11, 16, 12, 0.2);
+  --text-color: #717171;
+  --title-color: #0B100C;
+
+  /* Layout containers */
+  --max-container-width: 158rem;
+  --max-narrow-container-width: 105.4rem;
+  --content-padding: 5rem;
+
+  /* Font Family */
+  --main-ff: 'Raleway', sans-serif;
+  --secondary-ff: 'Oniks', serif;
+
+  /* Font Weight */
+  --semi-bold: 600;
+  --medium: 500;
+  --regular: 400;
+
+  /* Text */
+  --text-t1: var(--semi-bold) 2.6rem/130% var(--main-ff);
+  --text-t2: var(--medium) 2rem/130% var(--main-ff);
+  --text-t3: var(--semi-bold) 1.8rem/130% var(--main-ff);
+  --text-t4: var(--medium) 1.6rem/130% var(--main-ff);
+  --text-t5: var(--medium) 1.4rem/140% var(--main-ff);
+
+  /* Titles */
+  --title-h0: var(--regular) 46rem/90% var(--secondary-ff);
+  --title-h1: var(--regular) 30rem/75% var(--secondary-ff);
+  --title-h2: var(--regular) 14rem/95% var(--secondary-ff);
+  --title-h3: var(--semi-bold) 4rem/120% var(--main-ff);
+  --title-h3-reg: var(--regular) 4.5rem/120% var(--main-ff);
+  --title-h4: var(--medium) 2rem/120% var(--main-ff);
+  --title-h5: var(--semi-bold) 1.8rem/130% var(--main-ff);
+
+  /* Other Typography */
+  --other: var(--medium) 2.4rem/120% var(--main-ff);
+}
+
+@include breakpoint(tablet) {
+  :root {
+    /* Layout containers */
+    --content-padding: 3rem;
+
+    /* Text */
+    --text-t1: var(--semi-bold) 2rem/130% var(--main-ff);
+    --text-t2: var(--medium) 1.8rem/130% var(--main-ff);
+
+    /* Titles */
+    --title-h0: var(--regular) 25rem/90% var(--secondary-ff);
+    --title-h1: var(--regular) 11rem/75% var(--secondary-ff);
+    --title-h2: var(--regular) 10rem/85% var(--secondary-ff);
+    --title-h3: var(--semi-bold) 2.6rem/120% var(--main-ff);
+    --title-h3-reg: var(--regular) 2.6rem/120% var(--main-ff);
+    --title-h4: var(--medium) 1.6rem/120% var(--main-ff);
+    --title-h5: var(--semi-bold) 1.4rem/120% var(--main-ff);
+
+    --other: var(--medium) 2rem/120% var(--main-ff);
+  }
+}
+
+@include breakpoint(mobile) {
+  :root {
+    /* Layout containers */
+    --content-padding: 1.5rem;
+
+    /* Text */
+    --text-t1: var(--semi-bold) 1.6rem/130% var(--main-ff);
+    --text-t2: var(--medium) 1.4rem/130% var(--main-ff);
+    --text-t3: var(--semi-bold) 1.6rem/130% var(--main-ff);
+    --text-t4: var(--medium) 1.2rem/130% var(--main-ff);
+    --text-t5: var(--medium) 1.2rem/140% var(--main-ff);
+
+    /* Titles */
+    --title-h0: var(--regular) 15rem/90% var(--secondary-ff);
+    --title-h1: var(--regular) 9rem/75% var(--secondary-ff);
+    --title-h2: var(--regular) 6rem/85% var(--secondary-ff);
+    --title-h3: var(--semi-bold) 1.8rem/120% var(--main-ff);
+    --title-h3-reg: var(--regular) 1.8rem/120% var(--main-ff);
+    --title-h4: var(--medium) 1.2rem/120% var(--main-ff);
+    --title-h5: var(--semi-bold) 1rem/120% var(--main-ff);
+
+    /* Other Typography */
+    --other: var(--medium) 1.8rem/120% var(--main-ff);
+  }
+}
+
+$minWidth: 360;
+$maxWidth: 1680; // Ширина макета
+$base-transition-time: 0.3s;
+$base-transition-easing: ease;
+
+$overlay-color: rgba(0, 0, 0, 0.5);
+
+$modal-bg-color: white;

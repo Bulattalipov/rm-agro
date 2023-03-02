@@ -1,0 +1,141 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="news-single">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+            </div>
+            <div class="img-container">
+                <div class="img-container__img">
+                    <img class="img-container__photo lazyload" data-src="img/news-single-1.jpg" alt="Фото церемонии">
+                </div>
+            </div>
+            <div class="narrow-container">
+                <h1>Cлет передовиков сельского хозяйства Мамадышского района</h1>
+                {{> meta }}
+            </div>
+            <div class="text-container">
+                <p>
+                    4 марта прошёл слёт передовиков сельского хозяйства Мамадышского района. В нем приняли участие
+                    заместитель Председателя Государственного Совета Республики Татарстан Марат Ахметов, заместитель
+                    министра сельского хозяйства и продовольствия Республики Татарстан Ришат Хабипов, глава
+                    муниципального района Анатолий Иванов, руководители организаций и предприятий, труженики села
+                    и работники всех отраслей сельского хозяйства.
+                </p>
+                <p>
+                    Передовиков поздравил заместитель министра сельского хозяйства и продовольствия Республики Татарстан
+                    Рашит Хабипов. Он передал слова глубокой благодарности труженикам сельского хозяйства района
+                    от имени заместителя Премьер-министра — министра сельского хозяйства и продовольствия РТ Марата
+                    Зяббарова.
+                </p>
+                <p>
+                    В адрес работников группы компаний РМ прозвучали искренние слова благодарности за высоко
+                    организованную работу и за добросовестное отношение к труду. Мероприятие сопровождалось концертными
+                    номерами.
+                </p>
+                <h2>Загловок 1</h2>
+                <p>
+                    Генеральный директор группы компаний «РМ АГРО» Рифат Мутигуллин выступил на расширенном заседание
+                    коллегии Министерства сельского хозяйства и продовольствия Республики Татарстан
+                </p>
+                <blockquote class="blockquote">
+                    <div class="blockquote__top">
+                        <div class="blockquote__img">
+                            <img class="blockquote__photo lazyload" data-src="img/director.jpg" alt="Директор">
+                        </div>
+                        <div class="blockquote__text">
+                            <p>РМ Агро — компания, где можно начать или продолжить карьерный путь</p>
+                        </div>
+                    </div>
+                    <div class="blockquote__author">
+                        <cite class="blockquote__author-name">Мутигуллин Рифат Махмутович</cite>
+                        <span class="blockquote__author-position">Генеральный директор РМ Агро</span>
+                    </div>
+                </blockquote>
+                <h3>Загловок 2</h3>
+                <p>
+                    На празднике урожая передовикам труда были вручены государственные награды, медали, благодарственные
+                    письма, дипломы и почётные грамоты
+                </p>
+                <a class="img" data-src="img/news-single-2.jpg" data-fancybox>
+                    <img class="lazyload" data-src="img/news-single-2.jpg" alt="Фото">
+                </a>
+                <a class="img" data-src="img/news-single-3.jpg" data-fancybox>
+                    <img class="lazyload" data-src="img/news-single-2.jpg" alt="Фото">
+                </a>
+                <a class="img" data-src="img/news-single-4.jpg" data-fancybox>
+                    <img class="lazyload" data-src="img/news-single-2.jpg" alt="Фото">
+                </a>
+                <h3>Заголовок 2</h3>
+                <p>
+                    На празднике урожая передовикам труда были вручены государственные награды, медали, благодарственные
+                    письма, дипломы и почётные грамоты
+                </p>
+                <ul>
+                    {{#each list }}
+                        <li>{{this.text}}</li>
+                    {{/each}}
+                </ul>
+                <a class="video" data-src="https://youtu.be/e-Y7jWF1ATo" data-fancybox>
+                    <div class="video__block">
+                        {{> video-button }}
+                        <img class="video__preview lazyload" data-src="img/news-single-5.jpg" alt="Видео о РМ Агро">
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-section__inner">
+                    <div class="contacts-section__title-wrapper">
+                        <h2 class="contacts-section__title">связаться с&nbsp;нами</h2>
+                    </div>
+                    <div class="contacts-section__wrapper">
+                        <form class="contacts-section__form js-handle-form" action="#" data-need-validation="true" novalidate>
+                            <div class="contacts-section__form-wrapper">
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input" name="contactsName" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <textarea class="contacts-section__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
+                            </div>
+                            <div class="contacts-section__checkbox-block">
+                                <div class="contacts-section__checkbox-wrapper">
+                                    <input class="contacts-section__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox"> <span>Согласен на обработку<a href="#" download>&nbsp;персональных данных</a></span></label>
+                                </div>
+                            </div>
+                            <button class="contacts-section__button button button--white js-submit-form" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="contacts-section__content">
+                            <div class="contacts-section__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="contacts-section__links">
+                                <a class="contacts-section__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts-section__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

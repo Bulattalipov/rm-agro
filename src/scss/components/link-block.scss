@@ -1,0 +1,35 @@
+.link-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 44rem;
+
+  @include breakpoint(tablet) {
+    max-width: 34rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    gap: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    max-width: 29rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    font: var(--text-t2);
+    opacity: 0.8;
+  }
+
+  &__link {
+    span {
+      margin-top: 0.2rem;
+    }
+  }
+}
+

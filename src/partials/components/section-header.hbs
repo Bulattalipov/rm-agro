@@ -1,0 +1,30 @@
+<div class="section-header{{#if mask }} section-header--clipped{{/if}}{{#if dot }} section-header--dotted{{/if}}">
+    <div class="section-header__top">
+        <h2 class="section-header__title section-title">{{title}}</h2>
+        {{#if slider}}
+            <div class="section-header__slider swiper js-init-slider{{#if sliderMod }} {{sliderMod}}{{/if}}" data-slides="auto">
+                <div class="swiper-wrapper">
+                    {{#each data }}
+                        <div class="section-header__slide swiper-slide"><div class="section-header__slide-inner">{{this.title}}</div></div>
+                    {{/each}}
+                </div>
+            </div>
+            <a class="section-header__slider-link link link--black" href="#">
+                <span>смотреть все</span>
+                <svg>
+                    <use xlink:href="#link-arrow-icon"></use>
+                </svg>
+            </a>
+        {{/if}}
+        {{#if allLink }}
+            <a class="section-header__link link link--black" href="#">
+                <span>{{allLink}}</span>
+                <svg>
+                    <use xlink:href="#link-arrow-icon"></use>
+                </svg>
+            </a>
+        {{/if}}
+    </div>
+    <div class="section-header__line"></div>
+
+</div>

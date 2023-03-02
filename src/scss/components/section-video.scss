@@ -1,0 +1,76 @@
+.section-video {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 100%;
+  height: 80.5rem;
+  padding: 3.5rem;
+
+  border-radius: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+
+  color: #fff;
+
+  &:hover {
+    .video-button {
+      transform: translate(-50%, -50%) scale(1.2);
+
+      @include breakpoint(tablet) {
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    padding: 3rem;
+    height: 60rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 2.4rem;
+    height: 40rem;
+  }
+
+  @include breakpoint(mobile) {
+    aspect-ratio: 330 / 221;
+    padding: 2rem;
+    height: 21.1rem;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    font: var(--text-t2);
+    color: var(--light-bg-color);
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+      opacity: 0.6;
+    }
+  }
+
+  &__preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include transitionfix();
+  }
+
+  .video-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: 0.3s;
+  }
+}

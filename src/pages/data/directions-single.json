@@ -1,0 +1,191 @@
+{
+  "breadcrumbs": [
+    {
+      "text": "Главная",
+      "href": "index.html"
+    },
+    {
+      "text": "Направления деятельности",
+      "href": "directions.html"
+    },
+    {
+      "text": "Растениеводство",
+      "href": "directions-single.html",
+      "active": true
+    }
+  ],
+  "linksData": [
+    {
+      "href": "directions-single.html",
+      "text": "растениеводство"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "животноводство"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "молочное производство"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "производство колбас и деликатесов"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "забой скота"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "ГРК «АПРЕЛЬ»"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "Гостинично-ресторанный комплекс «Апрель» ",
+      "active": true
+    },
+    {
+      "href": "directions-single.html",
+      "text": "Строительство"
+    }
+  ],
+  "descriptionSlider": [
+    {
+      "title": "250 000",
+      "text": "тонн — производство <br>грубых и сочных кормов",
+      "img": "img/direction-feature-1.jpg"
+    },
+    {
+      "title": "65 000",
+      "text": "тонн — объём хранения <br>зёрна в элеваторах",
+      "img": "img/direction-feature-2.jpg"
+    },
+    {
+      "title": "41",
+      "text": "центнер с гекатара — урожайность",
+      "img": "img/direction-feature-3.jpg"
+    },
+    {
+      "title": "46 000",
+      "text": "гектар — земельный бак",
+      "img": "img/direction-feature-4.jpg"
+    }
+  ],
+  "types": [
+    {
+      "bg": "img/directions-single-wheat.svg",
+      "color": "#395937",
+      "img": "img/types-1.jpg",
+      "title": "производство сельскохозяйственных&nbsp;культур",
+      "tags": [
+        {
+          "text": "пшеница"
+        },
+        {
+          "text": "ячмень"
+        },
+        {
+          "text": "рапс"
+        },
+        {
+          "text": "люпин"
+        },
+        {
+          "text": "кукуруза"
+        },
+        {
+          "text": "тритикале"
+        },
+        {
+          "text": "соя"
+        },
+        {
+          "text": "подсолнечник"
+        }
+      ]
+    },
+    {
+      "bg": "img/directions-single-wheat.svg",
+      "color": "#395937",
+      "img": "img/types-2.jpg",
+      "title": "производство грубых и&nbsp;сочных&nbsp;кормов",
+      "tags": [
+        {
+          "text": "сенаж"
+        },
+        {
+          "text": "солома"
+        },
+        {
+          "text": "сено"
+        },
+        {
+          "text": "силос"
+        }
+      ]
+    },
+    {
+      "bg": "img/directions-single-wheat.svg",
+      "color": "#395937",
+      "img": "img/types-3.jpg",
+      "title": "Семеноводство",
+      "text": "Производство, подготовка и реализация семян высших и высоких репродукций."
+    },
+    {
+      "bg": "img/directions-single-wheat.svg",
+      "color": "#395937",
+      "img": "img/types-4.jpg",
+      "title": "Введение в оборот залежных земель"
+    }
+  ],
+  "advantages": [
+    {
+      "title": "Метод точного земледелия",
+      "text": "Cистема глобального позиционирования ГЛОНАСС, точный высев семян, агрохимическое картирование полейCистема глобального позиционирования ГЛОНАСС, точный высев семян, агрохимическое картирование полей"
+    },
+    {
+      "title": "Система No-till",
+      "text": "Cистема глобального позиционирования ГЛОНАСС, точный высев семян, агрохимическое картирование полей"
+    },
+    {
+      "title": "Раскисление почв",
+      "text": "Использование сырья мелового карьера "
+    },
+    {
+      "title": "шестипольный севооборот",
+      "text": "Удобрение полей органическими отходами собственных СВК "
+    }
+  ],
+  "products": [
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-4.png",
+      "title": "колбаса полукопчёная охлаждённая «Краковская»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-5.png",
+      "title": "\nветчина в оболочке"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-6.png",
+      "title": "\nколбаса сырокопчёная охлаждённая салями «Экстра»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-7.png",
+      "title": "\nколбаса варёная «Молочная»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-8.png",
+      "title": "\nколбаса полукопчёная охлаждённая «Домашняя»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-9.png",
+      "title": "колбаса полукопчёная охлаждённая «Донская»"
+    }
+  ]
+}

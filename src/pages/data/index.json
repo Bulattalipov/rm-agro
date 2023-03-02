@@ -1,0 +1,137 @@
+{
+  "loaderText": true,
+  "introActivities": [
+    {
+      "img": "img/intro-1.jpg",
+      "text": "Выращивание пщеницы"
+    },
+    {
+      "img": "img/intro-2.jpg",
+      "text": "Животноводство"
+    },
+    {
+      "img": "img/intro-3.jpg",
+      "text": "Молочное производство"
+    },
+    {
+      "img": "img/intro-4.jpg",
+      "text": "Животноводство"
+    },
+    {
+      "img": "img/intro-5.jpg",
+      "text": "Животноводство"
+    }
+  ],
+  "introProducts": [
+    {
+      "img": "img/intro-6.jpg",
+      "text": "Животноводство"
+    },
+    {
+      "img": "img/intro-7.jpg",
+      "text": "Животноводство"
+    }
+  ],
+  "aboutFeatures": [
+    {
+      "title": "250 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-1.jpeg"
+    },
+    {
+      "title": "13 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-2.jpeg"
+    },
+    {
+      "title": "14+",
+      "text": "гектаров-земельный бак",
+      "img": "img/about-3.jpeg"
+    },
+    {
+      "title": "13 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-2.jpeg"
+    },
+    {
+      "title": "13 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-2.jpeg"
+    },
+    {
+      "title": "13 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-2.jpeg"
+    },
+    {
+      "title": "13 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-2.jpeg"
+    },
+    {
+      "title": "13 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-2.jpeg"
+    },
+    {
+      "title": "13 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-2.jpeg"
+    }
+  ],
+  "products": [
+    {
+      "title": "Мясная продукция",
+      "img": "img/products-1.png"
+    },
+    {
+      "title": "колбасные изделия",
+      "img": "img/products-2.png"
+    }
+  ],
+  "job": [
+    {
+      "img": "img/director.jpg"
+    },
+    {
+      "img": "img/director.jpg"
+    },
+    {
+      "img": "img/director.jpg"
+    },
+    {
+      "img": "img/director.jpg"
+    },
+    {
+      "img": "img/director.jpg"
+    }
+  ],
+  "newsAction": [
+    {
+
+    },
+    {
+
+    },
+    {
+
+    }
+  ],
+  "news": [
+    {
+      "img": "img/news-1.jpg",
+      "title": "Спартакиада города по мини футболу",
+      "maskId": "news1"
+    },
+    {
+      "img": "img/news-2.jpg",
+      "title": "Церемония награждения победителей Республиканского общественного конкурса «Руководитель года-2021».",
+      "maskId": "news2"
+    },
+    {
+      "img": "img/news-3.jpg",
+      "title": "Cлет передовиков сельского хозяйства Мамадышского района",
+      "maskId": "news3"
+    }
+  ]
+}

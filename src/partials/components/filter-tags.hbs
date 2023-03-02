@@ -1,0 +1,10 @@
+<form class="filter-tags swiper js-filter-tags">
+    <div class="filter-tags__list swiper-wrapper">
+        {{# each data }}
+            <div class="filter-tags__item swiper-slide">
+                <input class="visually-hidden" id="{{this.id}}" name="sausageFilter" type="radio">
+                <label class="filter-tags__label" for="{{this.id}}">{{this.text}}</label>
+            </div>
+        {{/each}}
+    </div>
+</form>

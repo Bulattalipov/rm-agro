@@ -1,0 +1,17 @@
+<div class="features-slider js-section swiper">
+    <div class="features-slider__wrapper js-section-wrapper swiper-wrapper">
+        {{#each data }}
+            <div class="features-slider__slide js-section-slide swiper-slide">
+                <div class="features-slider__content">
+                    <h3><span>{{this.title}}</span></h3>
+                    <p>{{{this.text}}}</p>
+                </div>
+                <div class="features-slider__slide-img-block">
+                    <div class="features-slider__slide-img">
+                        <img src="{{this.img}}" alt="Фото преимущества">
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

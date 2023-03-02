@@ -1,0 +1,118 @@
+.table {
+  padding: 5rem 5rem 8rem;
+
+  border-radius: 2rem;
+  background-color: #fff;
+
+  @include breakpoint(tablet) {
+    align-items: flex-start;
+    overflow-x: auto;
+    padding: 4rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 3rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    padding-bottom: 5rem;
+
+    overflow: auto;
+
+    @include breakpoint(tablet) {
+      gap: 4.4rem;
+      width: 102.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 4rem;
+      padding-bottom: 5rem
+    }
+
+    @include breakpoint(mobile) {
+      width: 62rem;
+      gap: 3.5rem;
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include breakpoint(small-tablet) {
+      gap: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    font: var(--semi-bold) 3rem/120% var(--main-ff);
+    text-transform: uppercase;
+    color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      font-size: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(11, 16, 12, 0.1);
+
+    font: var(--text-t4);
+
+    &:first-child {
+      padding-top: 0;
+
+      text-transform: uppercase;
+      color: var(--title-color);
+
+      @include breakpoint(mobile) {
+        font-size: 0.8rem;
+      }
+    }
+
+    span {
+      grid-column: span 1;
+    }
+
+    span:last-child {
+      grid-column: span 2;
+
+      @include breakpoint(mobile) {
+        grid-column: span 1;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: repeat(10, 1fr);
+
+      span:first-child,
+      span:nth-child(4) {
+        grid-column: span 2;
+      }
+
+      span:last-child {
+        grid-column: span 4;
+      }
+    }
+  }
+}

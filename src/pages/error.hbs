@@ -1,0 +1,23 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="error">
+            <div class="container">
+                <div class="error__wrapper">
+                    <div class="error__content">
+                        <span class="error__desc">ошибка</span>
+                        <h1 class="error__title">К сожалению, такой страницы&nbsp;не существует</h1>
+                        <a class="error__link button button--white" href="index.html">
+                            <span>Вернуться на главную</span>
+                            <svg>
+                                <use xlink:href="#link-arrow-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="error__number">404</div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

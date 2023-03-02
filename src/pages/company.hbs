@@ -1,0 +1,223 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        {{> page-header title='О холдинге' bg='img/company-bg.jpg' }}
+        <section class="company__about">
+            <div class="container">
+                {{> section-header dot=true title='компания сегодня' }}
+            </div>
+            <div class="narrow-container">
+                <h2>
+                    В настоящее время Агропромышленный холдинг ООО «РМ АГРО» включает в себя комплекс предприятий
+                    по выращиванию кормов, животноводству и сбыту молочной и мясной продукции под торговой маркой «РМ»
+                </h2>
+                <p>
+                    Пашня, молочно-товарные фермы и мясоперерабатывающий комбинат построены в Мамадышском районе
+                    Республики Татарстан. Непосредственная близость объектов и производство полного цикла упрощают
+                    обработку данных для максимально продуктивной работы всех составляющих холдинга.
+                </p>
+                <p>
+                    В основе работы компании лежат принципы экологичности и полного контроля качества продукции на всех
+                    этапах производства. Используются технологии, построенные на базе израильских систем управления
+                    стадом и кормовым центром. Сочетание современных приборов и программного обеспечения позволяют
+                    гарантировать получение натурального сырья высшего сорта.
+                </p>
+                {{> numbers-slider data=numbers }}
+            </div>
+        </section>
+        <section class="company__video">
+            <div class="container">
+                {{> section-video title='Видео о компании' preview='img/company-video.jpg' }}
+            </div>
+        </section>
+        <section class="company__achievements">
+            <div class="container">
+                <div class="company__achievements-inner">
+                    {{> section-header title='Достижения' dot=true }}
+                    <ul class="company__achievements-list">
+                        {{#each achievements }}
+                            <li class="company__achievements-item">
+                                <div class="company__achievements-number-block">
+                                    <span class="company__achievements-number">{{this.number}}</span>
+                                    <div class="company__achievements-desc">
+                                        <p>{{{this.text}}}</p>
+                                    </div>
+                                </div>
+                                <div class="company__achievements-tag-block">
+                                    <a class="company__achievements-tag" href="directions-single.html">{{this.tag}}</a>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="company__team">
+            <div class="container">
+                {{> section-header title='наша команда' allLink='смотреть всех руководителей' }}
+                <div class="company__team-slider swiper" data-speed="6000">
+                    <div class="swiper-wrapper">
+                        {{#each team }}
+                            <div class="company__team-slide swiper-slide">
+                                <div class="company__team-img-block">
+                                    <div class="company__team-img">
+                                        <img src="{{this.img}}" alt="Фото руководителя">
+                                    </div>
+                                </div>
+                                <div class="company__team-content">
+                                    <h3 class="company__team-title">{{{this.title}}}</h3>
+                                    <p class="company__team-text">{{{this.text}}}</p>
+                                    <p class="company__team-text company__team-text--js-hide">{{{this.text}}}</p>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="company__team-slider swiper" data-reverse="true" data-speed="6000">
+                    <div class="swiper-wrapper">
+                        {{#each team }}
+                            <div class="company__team-slide swiper-slide">
+                                <div class="company__team-img-block">
+                                    <div class="company__team-img">
+                                        <img src="{{this.img}}" alt="Фото руководителя">
+                                    </div>
+                                </div>
+                                <div class="company__team-content">
+                                    <h3 class="company__team-title">{{{this.title}}}</h3>
+                                    <p class="company__team-text">{{{this.text}}}</p>
+                                    <p class="company__team-text company__team-text--js-hide">{{{this.text}}}</p>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="company__mobile-team-slider swiper">
+                    <div class="swiper-wrapper">
+                        {{#each team }}
+                            <div class="company__team-slide swiper-slide">
+                                <div class="company__team-img-block">
+                                    <div class="company__team-img">
+                                        <img src="{{this.img}}" alt="Фото руководителя">
+                                    </div>
+                                </div>
+                                <div class="company__team-content">
+                                    <h3 class="company__team-title">{{{this.title}}}</h3>
+                                    <p class="company__team-text">{{{this.text}}}</p>
+                                    <p class="company__team-text company__team-text--js-hide">{{{this.text}}}</p>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="company__history">
+            <div class="container">
+                {{> section-header title='история компании' }}
+                <div class="company__history-wrapper">
+                    <div class="company__history-numbers">
+                        <div class="company__history-numbers-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each history }}
+                                    <div class="company__history-numbers-slide swiper-slide">{{this.number}}</div>
+                                {{/each}}
+                            </div>
+                            {{> slider-navigation mod='slider-navigation--green' }}
+                        </div>
+                        <div class="company__history-numbers-sub-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each history }}
+                                    <div class="company__history-numbers-sub-slide swiper-slide">{{this.number}}</div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company__history-content">
+                        <div class="company__history-content-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each history }}
+                                    <div class="company__history-content-slide swiper-slide">
+                                        <h3 class="company__history-content-title">{{this.title}}</h3>
+                                        <div class="company__history-content-text">
+                                            <p>{{this.text}}</p>
+                                        </div>
+                                        <div class="company__history-content-img-block">
+                                            <div class="company__history-content-img">
+                                                <img src="{{this.img}}" alt="Фото">
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="company__activities activities">
+            <div class="container">
+                {{> section-header sliderMod='js-activities-slider-thumb' slider=true data=activities title='направления деятельности' }}
+                {{> activities-slider data=activities }}
+            </div>
+        </section>
+        <section class="company__partners">
+            <div class="container">
+                {{> section-header title='наша партнеры' }}
+                {{> partners-slider }}
+            </div>
+        </section>
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-section__inner">
+                    <div class="contacts-section__title-wrapper">
+                        <h2 class="contacts-section__title">связаться с&nbsp;нами</h2>
+                    </div>
+                    <div class="contacts-section__wrapper">
+                        <form class="contacts-section__form js-handle-form" action="#" data-need-validation="true" novalidate>
+                            <div class="contacts-section__form-wrapper">
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input" name="contactsName" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <textarea class="contacts-section__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
+                            </div>
+                            <div class="contacts-section__checkbox-block">
+                                <div class="contacts-section__checkbox-wrapper">
+                                    <input class="contacts-section__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox"> <span>Согласен на обработку<a href="#" download>&nbsp;персональных данных</a></span></label>
+                                </div>
+                            </div>
+                            <button class="contacts-section__button button button--white js-submit-form" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="contacts-section__content">
+                            <div class="contacts-section__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="contacts-section__links">
+                                <a class="contacts-section__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts-section__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

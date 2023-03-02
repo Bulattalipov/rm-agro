@@ -1,0 +1,229 @@
+<div class="modal js-modal" id="{{id}}">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">X</button>
+            <div class="modal__content">
+                {{#block "content"}}
+
+                {{/block}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-success js-modal js-modal-success" id="{{id}}">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <h3 class="modal-success__title">Ваша заявка успешно отправлена!</h3>
+            <button class="modal-success__button button button--white js-close-modal">закрыть</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-product js-modal js-modal-product" id="{{id}}">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal-product__body">
+                <div class="modal-product__img">
+                    {{#if catalogModal }}
+                        <img class="lazyload" data-src="img/saus-1.png" alt="Фото продукта">
+                    {{/if}}
+                </div>
+                <div class="modal-product__content">
+                    <div class="modal-product__main-info">
+                        <h3 class="modal-product__title">колбаса сырокопчёная охлаждённая «миланская»</h3>
+                        <div class="modal-product__desc">
+                            <p>Мясной продукт категории А, колбасное изделие, колбаса сыро-копчёная, охлаждённая</p>
+                        </div>
+                    </div>
+                    <div class="modal-product__property">
+                        <h4 class="modal-product__property-title">Энергетическая ценность на&nbsp;100&nbsp;г&nbsp;продукта:</h4>
+                        <ul class="modal-product__property-list">
+                            {{#each properties }}
+                                <li class="modal-product__property-item">
+                                    <span class="modal-product__property">{{this.property}}</span>
+                                    <span class="modal-product__property-value">{{this.value}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <ul class="modal-product__guarantee-list">
+                            {{#each guarantee }}
+                                <li class="modal-product__guarantee-item">
+                                    <img class="modal-product__guarantee-img lazyload" data-src="{{this.img}}"
+                                         alt="Фото иконки">
+                                    <span class="modal-product__guarantee-text">{{this.text}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <div class="modal-product__guarantee-desc">
+                            <p>
+                                Срок годности и условия хранения при температуре от 0 до +6°С и относительной влажности
+                                75–78%,упакованных в вакуум — 30 суток, после вскрытия упаковки — 72 часа в пределах
+                                общего срока годности при аналогичных условиях хранения
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-product__footer">
+                <h4 class="modal-product__footer-title">Варианты сервировки</h4>
+                <div class="modal-product__slider-container">
+                    <div class="modal-product__slider swiper">
+                        <div class="swiper-wrapper">
+                            {{#each serving }}
+                                <div class="modal-product__slide swiper-slide">
+                                    <img class="lazyload" data-src="{{this.img}}" alt="Фото сервировки">
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{> slider-navigation longArrow=true mod='slider-navigation--white' }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-menu js-modal js-modal-menu" id="{{id}}">
+    <div class="modal__container">
+        <div class="modal__inner-container">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal__inner">
+
+                <div class="modal-menu__content-block">
+                    <h3 class="modal-menu__title">субпродукты</h3>
+                    <ul class="modal-menu__list">
+                        <li class="modal-menu__item">
+                            <span>Наименование</span>
+                            <span>вес</span>
+                            <span>ед.изм</span>
+                            <span>ср. вес единицы</span>
+                            <span>Стандарт</span>
+                        </li>
+                        {{#each subProducts }}
+                            <li class="modal-menu__item">
+                                <span>Наименование</span>
+                                <span>1,000</span>
+                                <span>кг</span>
+                                <span>1,80</span>
+                                <span>ТУ 10.13.14–001–61806639–2020</span>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="modal-menu__content-block">
+                    <h3 class="modal-menu__title">халяль</h3>
+                    <ul class="modal-menu__list">
+                        <li class="modal-menu__item">
+                            <span>Наименование</span>
+                            <span>вес</span>
+                            <span>ед.изм</span>
+                            <span>ср. вес единицы</span>
+                            <span>Стандарт</span>
+                        </li>
+                        {{#each halal }}
+                            <li class="modal-menu__item">
+                                <span>Наименование</span>
+                                <span>1,000</span>
+                                <span>кг</span>
+                                <span>1,80</span>
+                                <span>ТУ 10.13.14–001–61806639–2020</span>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="modal-menu__content-block">
+                    <h3 class="modal-menu__title">вырезка</h3>
+                    <ul class="modal-menu__list">
+                        <li class="modal-menu__item">
+                            <span>Наименование</span>
+                            <span>вес</span>
+                            <span>ед.изм</span>
+                            <span>ср. вес единицы</span>
+                            <span>Стандарт</span>
+                        </li>
+                        {{#each clipping }}
+                            <li class="modal-menu__item">
+                                <span>Наименование</span>
+                                <span>1,000</span>
+                                <span>кг</span>
+                                <span>1,80</span>
+                                <span>ТУ 10.13.14–001–61806639–2020</span>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal modal-gallery js-modal js-modal-gallery" id="{{id}}">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal-gallery__slider-container">
+                <div class="modal-gallery__slider swiper">
+                    <div class="swiper-wrapper">
+                        {{#each mediaModal }}
+                            <div class="modal-gallery__slide swiper-slide">
+                                {{#if video }}
+                                    <iframe data-src="https://www.youtube.com/embed/Z3TWuCm4ncI" data-size="10 мб MP3"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                {{else}}
+                                    <picture>
+                                        <source srcset="{{this.imgWebp}}" type="image/webp">
+                                        <img class="lazyload" data-size="5 мб JPG" data-src="{{this.img}}" alt="Фото">
+                                    </picture>
+                                {{/if}}
+                            </div>
+                        {{/each}}
+                    </div>
+                    {{> slider-navigation longArrow=true mod='slider-navigation--white' }}
+                </div>
+            </div>
+            <h3 class="modal-gallery__title">«Весенне-полевые работы 2021 года»</h3>
+            <a class="modal-gallery__download" href target="_blank">
+                <span>Скачать<span>&nbsp;фотографию</span></span>
+                <img class="lazyload" data-src="img/download-icon.svg" alt="Иконка скачивания">
+            </a>
+            <span class="modal-gallery__size">5 мб JPG</span>
+            <div class="modal-gallery__sub-slider-container">
+                <div class="modal-gallery__sub-slider swiper">
+                    <div class="swiper-wrapper">
+                        {{#each mediaModal }}
+                            <div class="modal-gallery__sub-slide swiper-slide">
+                                <div class="modal-gallery__sub-slide-img">
+                                    {{#if video }}
+                                        {{> video-button }}
+                                    {{/if}}
+                                    <picture>
+                                        <source srcset="{{this.imgWebp}}" type="image/webp">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото">
+                                    </picture>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

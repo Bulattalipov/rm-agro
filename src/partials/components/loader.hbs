@@ -1,0 +1,155 @@
+<div class="loader{{#unless loaderText }} loader--img{{/unless}}">
+    {{#if loaderText }}
+        <div class="loader__text">
+        <span class="loader__number-block">
+            <div class="loader__largest-number">100</div>
+            <span class="loader__number active">1</span>
+            <span class="loader__number">5</span>
+        </span>%
+        </div>
+    {{else}}
+        <img class="loader__img" src="img/loader-logo.png">
+    {{/if}}
+</div>
+
+<style>
+    .loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #395937;
+    }
+    
+    .loader--img {
+        background-color: #E5E2DB;
+    }
+
+    .loader__img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 18.7rem;
+        height: 12.3rem;
+
+        transition: transform .4s ease .4s, visibility 0s linear .8s;
+    }
+
+    .loader__text {
+        position: absolute;
+        top: 19.3rem;
+        left: 5rem;
+
+        padding-top: 0.5rem;
+
+        clip-path: inset(0 0 0 0);
+        overflow: hidden;
+
+        font: 400 46rem/90% 'Oniks';
+        color: #fff;
+
+        transition: clip-path 1s ease;
+    }
+
+    .loader__text.hide {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    .loader__largest-number {
+        position: relative;
+
+        opacity: 1;
+        visibility: hidden;
+
+        font: 400 46rem/90% 'Oniks';
+    }
+
+    @media (max-width: 1024px) {
+        .loader__text, .loader__largest-number {
+            font-size: 25rem;
+        }
+
+        .loader__img {
+            width: 15rem;
+            height: 10.5rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .loader__text, .loader__largest-number {
+            font-size: 15rem;
+        }
+
+        .loader__img {
+            width: 11.8rem;
+            height: 9rem;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .loader__text, .loader__largest-number {
+            font-size: 12rem;
+        }
+    }
+
+    .loader__number-block {
+        position: relative;
+
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    .loader__number {
+        position: absolute;
+        top: 0;
+        transform: translateY(110%);
+        right: 0;
+
+        transition: 0.3s;
+    }
+
+    .loader__number.active {
+        transform: translateY(0%);
+        top: 0;
+        transition: 0.3s;
+    }
+
+    .loader__number.hide {
+        top: 0;
+        transform: translateY(-110%);
+        transition: 0.3s;
+    }
+
+    .disable-scroll {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .animatable .loader--img {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s ease .4s, visibility 0s linear .8s;
+    }
+
+    .animatable .loader__img {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    .loader.hide {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s ease .4s, visibility 0s linear .8s;
+    }
+</style>

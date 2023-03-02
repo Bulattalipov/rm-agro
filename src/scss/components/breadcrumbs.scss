@@ -1,0 +1,63 @@
+.breadcrumbs {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0;
+
+  overflow: visible;
+
+  &__item {
+    position: relative;
+
+    width: auto;
+
+    font: var(--text-t4);
+    color: var(--title-color);
+    opacity: 1;
+
+    transition: 0.3s;
+
+    &.active {
+      opacity: 0.6;
+    }
+
+    a {
+      display: block;
+      padding: 0 1rem;
+
+      @include breakpoint(mobile) {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 145px;
+      }
+    }
+
+    &:not(:last-child):hover {
+      opacity: 0.8;
+    }
+
+    &:first-child a {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      pointer-events: none;
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100%;
+
+      width: 0.3rem;
+      height: 0.3rem;
+
+      border-radius: 50%;
+      background-color: var(--title-color);
+      opacity: 0.3;
+    }
+  }
+}

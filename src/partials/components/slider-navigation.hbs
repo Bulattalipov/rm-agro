@@ -1,0 +1,24 @@
+<div class="slider-navigation{{#if mod }} {{mod}}{{/if}} js-slider-navigation">
+    <button class="slider-navigation__button{{#if buttonMod }} {{buttonMod}}{{/if}} js-prev-slide">
+        {{#if longArrow }}
+            <svg>
+                <use xlink:href="#long-slider-arrow"></use>
+            </svg>
+        {{ else }}
+            <svg>
+                <use xlink:href="#slider-arrow"></use>
+            </svg>
+        {{/if}}
+    </button>
+    <button class="slider-navigation__button{{#if buttonMod }} {{buttonMod}}{{/if}} js-next-slide">
+        {{#if longArrow }}
+            <svg>
+                <use xlink:href="#long-slider-arrow"></use>
+            </svg>
+        {{ else }}
+            <svg>
+                <use xlink:href="#slider-arrow"></use>
+            </svg>
+        {{/if}}
+    </button>
+</div>

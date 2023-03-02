@@ -1,0 +1,241 @@
+.footer {
+  padding: 7rem 0 2.8rem;
+
+  @include breakpoint(tablet) {
+    padding: 6rem 0 2.4rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 5.5rem 0 2rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 5rem 0 1rem;
+  }
+
+  &--none {
+    display: none;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 13.7rem;
+      height: 7.3rem;
+
+      transition: 0.3s;
+
+      @include breakpoint(tablet) {
+        width: 10rem;
+        height: 5.5rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 6.8rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 131.7rem;
+    width: 100%;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+    }
+  }
+
+  &__row {
+    display: flex;
+    grid-template-columns: auto 1fr;
+    gap: 6rem;
+
+    @include breakpoint(tablet) {
+      gap: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &:first-child {
+      padding-bottom: 4.4rem;
+      border-bottom: 1px solid rgba(60, 60, 58, 0.2);
+
+      @include breakpoint(tablet) {
+        padding-bottom: 2rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+
+    &:last-child {
+      padding-top: 2rem;
+    }
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem 7.7rem;
+    width: 100%;
+    max-width: 73.2rem;
+
+    @include breakpoint(tablet) {
+      width: auto;
+      gap: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+  }
+
+  &__menu-item,
+  &__mobile-menu-item {
+    font: var(--text-t2);
+    text-transform: uppercase;
+    color: #3C3C3A;
+  }
+
+  &__menu-link,
+  &__mobile-menu-link {
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include breakpoint(small-tablet) {
+      padding: 3rem 0;
+
+      border-top: 1px solid rgba(60, 60, 58, 0.2);
+      border-bottom: 1px solid rgba(60, 60, 58, 0.2);
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem 0;
+    }
+  }
+
+  &__address {
+    max-width: 30rem;
+
+    font: var(--text-t4);
+    font-size: 1.6rem;
+    color: #3C3C3A;
+
+    @include breakpoint(small-tablet) {
+      max-width: none;
+    }
+  }
+
+  &__contacts-footer {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 1rem;
+    }
+  }
+
+  &__phone {
+    font: var(--title-h3);
+    font-variant-numeric: lining-nums;
+    color: var(--accent-color);
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__confidence {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 48.1rem;
+
+    font: var(--text-t5);
+    font-variant-numeric: lining-nums;
+    color: #414141;
+
+    @include breakpoint(tablet) {
+      width: auto;
+      margin-right: auto;
+    }
+
+    @include breakpoint(small-tablet) {
+      align-items: flex-start;
+      flex-direction: column;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__developer {
+    display: flex;
+    gap: 2.2rem;
+    margin-left: auto;
+
+    font: var(--text-t4);
+    color: #414141;
+
+    @include breakpoint(small-tablet) {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    svg {
+      width: 8.8rem;
+      height: 2.2rem;
+    }
+  }
+}

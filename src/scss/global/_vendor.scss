@@ -1,0 +1,43 @@
+@import '../../node_modules/swiper/swiper-bundle';
+@import '../../node_modules/choices.js/public/assets/styles/choices';
+@import '../../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone';
+@import "../../node_modules/@fancyapps/ui/dist/fancybox";
+
+.swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-button-lock {
+    display: none !important;
+}
+
+.swiper-lazy-preloader {
+    border-color: var(--accent-color);
+    border-top-color: transparent;
+}
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.swiper-pagination {
+    font: var(--text-t5);
+    font-variant-numeric: lining-nums;
+    color: #221F20;
+    opacity: 0.6;
+}
+
+.parsley-errors-list {
+    font-size: 1.4rem;
+    color: rgba(221, 198, 186, 1);
+}
+
+/* Яндекс карты */

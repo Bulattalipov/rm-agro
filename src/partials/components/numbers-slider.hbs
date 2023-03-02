@@ -1,0 +1,10 @@
+<div class="numbers-slider js-section swiper">
+    <div class="numbers-slider__wrapper js-section-wrapper swiper-wrapper">
+        {{#each data }}
+            <div class="numbers-slider__slide js-section-slide swiper-slide">
+                <p class="numbers-slider__text">{{this.text}}</p>
+                <span class="numbers-slider__number">{{this.number}}</span>
+            </div>
+        {{/each}}
+    </div>
+</div>

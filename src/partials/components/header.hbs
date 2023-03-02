@@ -1,0 +1,93 @@
+<div class="header-container">
+    <header class="header{{#if headerMod }} {{headerMod}}{{/if}}">
+        <div class="container">
+            <div class="header__wrapper">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Логотип РМ Агро">
+                </a>
+                <nav class="header__nav">
+                    <div class="header__column">
+                        <ul class="header__menu">
+                            {{#each menuLeft }}
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="{{this.href}}">{{this.text}}</a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <button class="header__burger" type="button"></button>
+                    </div>
+                    <div class="header__column">
+                        <ul class="header__menu">
+                            {{#each menuRight }}
+                                <li class="header__menu-item">
+                                    <a class="header__menu-link" href="{{this.href}}">{{this.text}}</a>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <a class="header__phone border-button" href="tel:+79061201515">+7 906 120-15-15</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="header__burger-nav">
+        <div class="container">
+            <div class="header__burger-nav-wrapper">
+                <ul class="header__burger-multi-menu">
+                    {{#each burgerMultiMenu }}
+                        <li class="header__burger-multi-menu-item">
+                            <h3 class="header__burger-multi-menu-title">{{this.title}}</h3>
+                            <ul class="header__burger-submenu">
+                                {{#each this.submenu }}
+                                    <li class="header__burger-submenu-item">
+                                        <a class="header__burger-submenu-link" href="{{this.href}}">{{this.text}}</a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                    {{/each}}
+                </ul>
+                <ul class="header__burger-menu">
+                    {{#each burgerMenu }}
+                        <li class="header__burger-menu-item">
+                            <a class="header__burger-menu-link" href="{{this.href}}">{{this.text}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+                <div class="header__burger-contacts">
+                    <div class="header__burger-contacts-top">
+                        <a class="header__burger-mail" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                        {{> socials data=socials }}
+                    </div>
+                    <div class="header__burger-contacts-bottom">
+                        <div class="header__burger-contacts-phone-block">
+                            <h4 class="header__burger-contacts-phone-title">Отдел кадров</h4>
+                            <a class="header__burger-contacts-phone" href="tel:+78556335448">+7 (85563) 3-54-48</a>
+                        </div>
+                        <div class="header__burger-contacts-phone-block">
+                            <h4 class="header__burger-contacts-phone-title">Отдел продаж</h4>
+                            <a class="header__burger-contacts-phone" href="tel:+79061201515">+7 906 120-15-15</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--
+
+  @include breakpoint(tablet) {
+
+  }
+
+  @include breakpoint(small-tablet) {
+
+  }
+
+  @include breakpoint(mobile) {
+
+  }
+
+-->

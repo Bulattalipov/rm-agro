@@ -1,0 +1,292 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="intro" style="background: url('img/intro-bg.jpg') no-repeat center; background-size: cover;">
+            <div class="container">
+                <div class="intro__wrapper">
+                    <div class="intro__header">
+                        <div class="intro__title-wrapper">
+                            <h1 class="intro__title">РМ АГРО</h1>
+                        </div>
+                        {{> link-block buttonMod='button--white' buttonText='подробнее' text="Производство качественных колбасных изделий и экологически чистой мясной продукции"}}
+                    </div>
+                    <div class="intro__body">
+                        <a class="intro__video-link" data-src="https://youtu.be/e-Y7jWF1ATo" data-fancybox>
+                            <button class="intro__video-button">
+                                {{> video-button }}
+                            </button>
+                            <img class="lazyload" data-src="img/intro-video.jpg" alt="Фото">
+                            {{#each introActivities }}
+                                <img class="intro__video-hide-img lazyload" data-src="{{this.img}}" alt="Фото">
+                            {{/each}}
+                            {{#each introProducts }}
+                                <img class="intro__video-hide-img lazyload" data-src="{{this.img}}" alt="Фото">
+                            {{/each}}
+                        </a>
+                    </div>
+                    <div class="intro__footer">
+                        <div class="intro__footer-column">
+                            <a class="intro__list-title" href="#">
+                                <span>направления <br> деятельности</span>
+                                {{#each introActivities }}
+                                    <span class="js-list-title-hide">{{this.text}}</span>
+                                {{/each}}
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </a>
+                            <ul class="intro__list">
+                                {{#each introActivities }}
+                                    <li class="intro__list-item" data-text="{{this.text}}">
+                                        <a href="#">
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото направления">
+                                        </a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        <div class="intro__footer-column">
+                            <a class="intro__list-title" href="#">
+                                <span>смотреть <br> продукцию</span>
+                                {{#each introProducts }}
+                                    <span class="js-list-title-hide">{{this.text}}</span>
+                                {{/each}}
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </a>
+                            <ul class="intro__list">
+                                {{#each introProducts }}
+                                    <li class="intro__list-item" data-text="{{this.text}}">
+                                        <a href="#">
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото направления">
+                                        </a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                {{> section-header title='о компании' }}
+                <div class="about__top">
+                    <div class="about__lead">
+                        <h3>
+                            Одно из ведущих в Российской федерации агропромышленных объединений с замкнутым циклом
+                            «От поля до прилавка»
+                        </h3>
+                    </div>
+                    {{> link-block buttonMod='button--green' buttonText='подробнее' text='Специализация: животноводство, производство мясной и молочной продукции и её реализация потребителям' }}
+                </div>
+                {{> features-slider data=aboutFeatures }}
+            </div>
+        </section>
+        <section class="activities">
+            <div class="container">
+                {{> section-header sliderMod='js-activities-slider-thumb' slider=true data=activities title='направления деятельности' }}
+                {{> activities-slider data=activities }}
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                {{> section-header  allLink='смотреть все' title='наша продукция' }}
+                <ul class="products__list">
+                    {{#each products }}
+                        <li class="products__item-wrapper">
+                            <a class="products__item" href="#">
+                                <h3 class="products__item-title">{{this.title}}</h3>
+                                <span class="products__item-link button button--white js-hover-button">перейти в раздел</span>
+                                <span class="products__item-link-transparent button button--white js-hover-button-clone">перейти в раздел</span>
+                                <img class="products__item-img lazyload" data-src="{{this.img}}" alt="Фото продукции">
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+        <section class="job">
+            <div class="container">
+                <div class="job__inner" style="--overlay-color: rgba(0, 0, 0, 0.2);">
+                    <div class="job__body">
+                        <h2 class="job__title">работа у&nbsp;нас</h2>
+                        <div class="job__slider">
+                            <div class="swiper js-init-slider" data-auto-height="true">
+                                <div class="swiper-wrapper">
+                                    {{#each job }}
+                                        <blockquote class="job__slide swiper-slide">
+                                            <div class="job__slide-top">
+                                                <div class="job__slide-img">
+                                                    <img class="lazyload" data-src="{{this.img}}" alt="Фото сотрудника">
+                                                </div>
+                                                <div class="job__slide-text">
+                                                    <p>РМ Агро — компания, где можно начать или продолжить карьерный
+                                                        путь</p>
+                                                </div>
+                                            </div>
+                                            <cite class="job__slide-author">
+                                                <span>Мутигуллин Р.М.</span>
+                                                <span>Генеральный директор РМ Агро</span>
+                                            </cite>
+                                        </blockquote>
+                                    {{/each}}
+                                </div>
+                                {{> slider-navigation }}
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job__footer">
+                        <div class="job__employments">
+                            <div class="job__employments-images">
+                                <img class="lazyload" data-src="img/employment-1.jpg" alt="Фото сотрудника">
+                                <img class="lazyload" data-src="img/employment-2.jpg" alt="Фото сотрудника">
+                                <img class="lazyload" data-src="img/employment-3.jpg" alt="Фото сотрудника">
+                            </div>
+                            <div class="job__employments-text">
+                                <p>
+                                    Опыт профессионалов сельского хозяйства, который позволяет расти и&nbsp;развиваться
+                                    молодым
+                                    специалистам отрасли
+                                </p>
+                            </div>
+                        </div>
+                        <div class="job__links">
+                            <a class="job__link link link--pale-white" href="#">
+                                <span>смотреть вакансии</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </a>
+                            <a class="job__link link link--pale-white" href="#">
+                                <span>Больше о работе с нами</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news-section">
+            <div class="container">
+                {{> section-header maskId='newsHeader' mask=true allLink='смотреть все' title='новости и акции' }}
+                <div class="news-section__wrapper">
+                    <div class="news-section__slider">
+                        <div class="swiper js-init-slider" data-fade='true'>
+                            <div class="swiper-wrapper">
+                                {{#each newsAction }}
+                                    <div class="news-section__slide swiper-slide">
+                                        <div class="news-section__slide-header">
+                                            <a class="news-section__tag border-button" href="#">Акция</a>
+                                            <time class="news-section__time" datetime="2021-12-28">28 декабря 2021</time>
+                                        </div>
+                                        <div class="news-section__slide-content">
+                                            <h3>Специальное предложения только для наших партнеров</h3>
+                                            <div class="news-section__slide-text">
+                                                <p>
+                                                    Генеральный директор ООО «АПК Продовольственная программа» Мутигуллин
+                                                    Рифат
+                                                    Махмутович стал Лауреатом конкурса в номинации «За активное развитие
+                                                    кадрового потенциала»
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <a class="news-section__slide-link button button--green" href="#">
+                                            <span>узнать подробнее</span>
+                                            <svg>
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </a>
+                                        <div class="news-section__slide-img-block">
+                                            <div class="news-section__slide-img">
+                                                <img class="lazyload" data-src="img/news-4.png" alt="Фото колбаски">
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                            {{> slider-navigation }}
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <ul class="news-section__list">
+                        {{#each news }}
+                            <li class="news-section__item">
+                                <div class="news-section__item-img-block">
+                                    <div class="news-section__item-img">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото новости">
+                                    </div>
+                                </div>
+                                <div class="news-section__item-content">
+                                    <h3>{{this.title}}</h3>
+                                    <div class="news-section__item-footer">
+                                        <time class="news-section__time" datetime="2021-12-28">28 декабря 2021</time>
+                                        <a class="news-section__tag border-button" href="#">Новость</a>
+                                    </div>
+                                </div>
+                                <a class="news-section__item-link" href="#"></a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-section__inner">
+                    <div class="contacts-section__title-wrapper">
+                        <h2 class="contacts-section__title">связаться с&nbsp;нами</h2>
+                    </div>
+                    <div class="contacts-section__wrapper">
+                        <form class="contacts-section__form js-handle-form" action="#" data-need-validation="true">
+                            <div class="contacts-section__form-wrapper">
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input" name="contactsName" data-parsley-pattern="^[а-яА-ЯA-Za-z- ]+[^\s]+$" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <textarea class="contacts-section__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
+                            </div>
+                            <div class="contacts-section__checkbox-block">
+                                <div class="contacts-section__checkbox-wrapper">
+                                    <input class="contacts-section__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox"> <span>Согласен на обработку<a href="#" download>&nbsp;персональных данных</a></span></label>
+                                </div>
+                            </div>
+                            <button class="contacts-section__button button button--white js-submit-form" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="contacts-section__content">
+                            <div class="contacts-section__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="contacts-section__links">
+                                <a class="contacts-section__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts-section__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

@@ -1,0 +1,66 @@
+.about {
+  padding: 12rem 0 9.4rem;
+
+  @include breakpoint(tablet) {
+    padding: 9rem 0 8rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 7rem 0;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 5rem 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 11rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      margin-bottom: 6rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__lead {
+    max-width: 95rem;
+
+    font: var(--title-h3);
+    letter-spacing: -0.01em;
+    text-indent: 3.5rem;
+    text-transform: uppercase;
+    color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      max-width: none;
+    }
+
+    @include breakpoint(small-tablet) {
+      text-indent: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      text-indent: 0.5rem;
+    }
+  }
+
+  .link-block {
+    max-width: 53rem;
+
+    @include breakpoint(tablet) {
+      max-width: 43rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+  }
+}

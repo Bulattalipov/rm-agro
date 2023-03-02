@@ -1,0 +1,9 @@
+<div class="breadcrumbs swiper js-init-slider" data-slides="auto">
+    <div class="swiper-wrapper">
+        {{#each data }}
+            <div class="breadcrumbs__item swiper-slide{{#if active }} active{{/if}}">
+                <a href="{{this.href}}">{{this.text}}</a>
+            </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,228 @@
+.contacts {
+    padding-bottom: 15rem;
+
+    @include breakpoint(tablet) {
+        padding-bottom: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-bottom: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding-bottom: 8rem;
+    }
+
+    .breadcrumbs {
+        margin-bottom: 3.7rem;
+
+        @include breakpoint(tablet) {
+            margin-bottom: 3.2rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            margin-bottom: 3rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 2.6rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 7rem;
+
+        font: var(--title-h1);
+        color: var(--title-color);
+
+        @include breakpoint(tablet) {
+            margin-bottom: 5rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            margin-bottom: 4rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 5.3rem;
+        padding: 5rem;
+
+        border-radius: 2rem;
+        background-color: #fff;
+
+        @include breakpoint(tablet) {
+            gap: 5rem;
+            padding: 3rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            gap: 4.5rem;
+            padding: 2rem;
+        }
+
+        @include breakpoint(mobile) {
+            padding: 1rem;
+            gap: 4rem;
+
+            border-radius: 1.5rem;
+        }
+    }
+    
+    &__content-top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include breakpoint(tablet) {
+            gap: 4rem;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__link {
+        display: inline-block;
+        margin-bottom: 1rem;
+
+        font: var(--title-h3);
+        text-transform: uppercase;
+        color: var(--accent-color);
+    }
+
+    &__desc {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        height: 3.5rem;
+        padding: 0 1rem;
+        margin-top: auto;
+
+
+        border: 1px solid var(--stroke-color);
+        border-radius: 2rem;
+
+        font: var(--text-t3);
+        font-weight: 500;
+        color: var(--title-color);
+
+        @include breakpoint(small-tablet) {
+            height: 3rem;
+        }
+
+        @include breakpoint(mobile) {
+            order: -1;
+            margin-bottom: 1rem;
+            height: 2.6rem;
+
+            font-size: 1.2rem;
+        }
+
+        img {
+            width: 2.4rem;
+            height: 2.2rem;
+
+            @include breakpoint(tablet) {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            @include breakpoint(small-tablet) {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+
+            @include breakpoint(mobile) {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+
+        span {
+            @include breakpoint(mobile) {
+                padding-top: 0.2rem;
+            }
+        }
+    }
+
+    &__info-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0 1.7rem;
+
+        border-bottom: 1px dashed var(--stroke-color);
+
+        @include breakpoint(tablet) {
+            padding: 1.6rem 0;
+        }
+
+        @include breakpoint(small-tablet) {
+            padding: 1.2rem 0;
+        }
+
+        @include breakpoint(mobile) {
+            padding: 0.8rem 0;
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    &__info-title {
+        max-width: 70%;
+
+        font: var(--text-t2);
+        text-transform: uppercase;
+
+        @include breakpoint(mobile) {
+            max-width: 50%;
+        }
+    }
+
+    &__info-link, &__info-address {
+        font: var(--text-t4);
+        color: var(--title-color);
+
+        transition: 0.3s;
+
+        @include breakpoint(mobile) {
+            max-width: 12.5rem;
+        }
+    }
+
+    &__info-link:hover {
+        opacity: 0.7;
+    }
+
+    &__content-map {
+        height: 65.8rem;
+
+        border-radius: 2rem;
+        overflow: hidden;
+
+        @include breakpoint(tablet) {
+            height: 60rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            height: 50rem;
+        }
+
+        @include breakpoint(mobile) {
+            height: 42.7rem;
+        }
+    }
+}

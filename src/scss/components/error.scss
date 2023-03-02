@@ -1,0 +1,98 @@
+.error {
+  padding-top: calc(var(--header-height) + 7rem);
+  min-height: 100vh;
+
+  background: url(../img/error-bg.jpg) no-repeat center;
+  background-size: cover;
+
+  color: #fff;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      justify-content: flex-start;
+      gap: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+      gap: 5rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 38rem;
+  }
+
+  &__desc {
+    margin-bottom: 2rem;
+
+    opacity: 0.5;
+
+    font: var(--text-t3);
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+
+    font: var(--title-h3);
+    text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__link {
+    position: relative;
+    z-index: 1;
+
+    height: 4rem;
+    font-size: 1.6rem;
+
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+      height: 3.3rem;
+    }
+  }
+
+  &__number {
+    padding-top: 7rem;
+
+    font: var(--regular) 87rem/100% var(--secondary-ff);
+    color: var(--bg-color);
+
+    @include breakpoint(tablet) {
+      padding-top: 0;
+      font-size: 44rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 22rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 48rem;
+      margin-bottom: -15rem;
+    }
+  }
+}

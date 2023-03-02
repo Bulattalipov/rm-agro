@@ -1,0 +1,47 @@
+<footer class="footer{{#if footerNone }} footer--none{{/if}}">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a class="footer__logo" href="index.html">
+                <img class="lazyload" data-src="img/logo.png" alt="Логотип РМ Агро">
+            </a>
+            <div class="footer__content">
+                <div class="footer__row">
+                    <ul class="footer__menu">
+                        {{#each footerMenu }}
+                            <li class="footer__menu-item">
+                                <a class="footer__menu-link" href="{{this.href}}">{{this.text}}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <ul class="footer__mobile-menu">
+                        <li class="footer__mobile-menu-item">
+                            <a class="footer__mobile-menu-link" href="#">Каталог</a>
+                        </li>
+                        <li class="footer__mobile-menu-item">
+                            <a class="footer__mobile-menu-link" href="#">направления деятельности</a>
+                        </li>
+                    </ul>
+                    <div class="footer__contacts">
+                        <address class="footer__address">422191, РТ, Мамадыш, ул. Дачная, д. 15</address>
+                        <div class="footer__contacts-footer">
+                            {{> socials data=socials }}
+                            <a class="footer__phone" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__row">
+                    <p class="footer__confidence">
+                        © 2011-2019 ООО "РМ АГРО"
+                        <a class="link link--black" href="#">Политика конфиденциальности</a>
+                    </p>
+                    <a class="footer__developer" href="#">
+                        <span>Сайт разработан</span>
+                        <svg>
+                            <use xlink:href="#mark-weber"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

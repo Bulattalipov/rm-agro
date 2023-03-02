@@ -1,0 +1,7 @@
+<div class="links-list{{#if mod }} {{mod}}{{/if}} swiper js-init-slider" data-slides="auto" data-spaces="280:10,768:20">
+    <div class="swiper-wrapper">
+        {{#each data }}
+            <a class="links-list__link{{#if this.active }} active{{/if}} swiper-slide" href="{{this.href}}">{{this.text}}</a>
+        {{/each}}
+    </div>
+</div>

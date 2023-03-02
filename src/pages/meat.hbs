@@ -1,0 +1,111 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="meat">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                {{> main-titles firstLink='sausages.html' secondLink='meat.html' secondTitleMain=true title-1='Колбасные изделия' title-2='Мясная продукция' }}
+                <div class="meat__filter">
+                    <div class="meat__filter-tags">
+                        {{> filter-tags data=filter }}
+                    </div>
+                    {{> download-link }}
+                </div>
+                <ul class="meat__list">
+                    {{#each meat }}
+                        <li class="meat__item"{{#if menuCard }} style="background: url('img/meat-menu-bg.png') no-repeat center; background-size: cover"{{/if}}>
+                            {{#if menuCard }}
+                                <a class="meat__menu-item-link" href="#menu">
+                                    <h3 class="meat__menu-item-title">субпродукты</h3>
+                                    <div class="meat__menu-item-wrapper">
+                                        <ul class="meat__menu-item-digits">
+                                            {{#each ../digits }}
+                                                <li class="meat__menu-item-digit">
+                                                    <span class="meat__menu-item-number">{{this.number}}</span>
+                                                    <span class="meat__menu-item-text">{{this.text}}</span>
+                                                </li>
+                                            {{/each}}
+                                        </ul>
+                                        <span class="meat__menu-item-button button button--white">
+                                            смотреть
+                                            <svg>
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            {{else}}
+                                <a class="meat__item-link" href="#product">
+                                    <div class="meat__item-img" style="background: {{this.background}}">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото колбаски">
+                                    </div>
+                                    <div class="meat__item-content">
+                                        <h3 class="meat__item-title">{{this.title}}</h3>
+                                        <svg class="meat__item-icon">
+                                            <use xlink:href="#link-arrow-icon"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            {{/if}}
+
+                        </li>
+                    {{/each}}
+                </ul>
+                <!--{{> table }}-->
+            </div>
+        </section>
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-section__inner">
+                    <div class="contacts-section__title-wrapper">
+                        <h2 class="contacts-section__title">связаться с&nbsp;нами</h2>
+                    </div>
+                    <div class="contacts-section__wrapper">
+                        <form class="contacts-section__form js-handle-form" action="#" data-need-validation="true" novalidate>
+                            <div class="contacts-section__form-wrapper">
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input" name="contactsName" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <textarea class="contacts-section__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
+                            </div>
+                            <div class="contacts-section__checkbox-block">
+                                <div class="contacts-section__checkbox-wrapper">
+                                    <input class="contacts-section__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox"> <span>Согласен на обработку<a href="#" download>&nbsp;персональных данных</a></span></label>
+                                </div>
+                            </div>
+                            <button class="contacts-section__button button button--white js-submit-form" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="contacts-section__content">
+                            <div class="contacts-section__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="contacts-section__links">
+                                <a class="contacts-section__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts-section__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

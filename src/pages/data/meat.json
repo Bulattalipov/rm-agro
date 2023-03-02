@@ -1,0 +1,249 @@
+{
+  "headerMod": "header--dark",
+  "catalogModal": true,
+  "breadcrumbs": [
+    {
+      "href": "index.html",
+      "text": "Главная"
+    },
+    {
+      "href": "sausages.html",
+      "text": "Каталог",
+      "active": true
+    }
+  ],
+  "guarantee": [
+    {
+      "img": "img/guarantee-1.svg",
+      "text": "от +0 до +6 С"
+    },
+    {
+      "img": "img/guarantee-2.svg",
+      "text": "30 суток"
+    }
+  ],
+  "serving": [
+    {
+      "img": "img/serving-1.jpg"
+    },
+    {
+      "img": "img/serving-2.jpg"
+    },
+    {
+      "img": "img/serving-3.jpg"
+    },
+    {
+      "img": "img/serving-1.jpg"
+    },
+    {
+      "img": "img/serving-2.jpg"
+    }
+  ],
+  "filter": [
+    {
+      "id": "tag1",
+      "text": "весь ассортимент"
+    },
+    {
+      "id": "tag2",
+      "text": "вареные"
+    },
+    {
+      "id": "tag3",
+      "text": "полукопченые"
+    },
+    {
+      "id": "tag4",
+      "text": "сыровяленые"
+    },
+    {
+      "id": "tag5",
+      "text": "варено-копченые"
+    },
+    {
+      "id": "tag6",
+      "text": "сырокопченые"
+    },
+    {
+      "id": "tag7",
+      "text": "мясные деликатесы"
+    },
+    {
+      "id": "tag8",
+      "text": "ветчины и окорока"
+    },
+    {
+      "id": "tag9",
+      "text": "деликатесы сырокопченые"
+    },
+    {
+      "id": "tag10",
+      "text": "сосиски и сардельки"
+    }
+  ],
+  "meat": [
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-1.png",
+      "title": "колбаса сырокопчёная охлаждённая «Миланская»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-2.png",
+      "title": "\nГрудинка домашняя"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-3.png",
+      "title": "\nколбаса вареная “Русская”",
+      "menuCard": true
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-4.png",
+      "title": "колбаса полукопчёная охлаждённая «Краковская»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-5.png",
+      "title": "\nветчина в оболочке"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-6.png",
+      "title": "\nколбаса сырокопчёная охлаждённая салями «Экстра»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-7.png",
+      "title": "\nколбаса варёная «Молочная»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-8.png",
+      "title": "\nколбаса полукопчёная охлаждённая «Домашняя»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-9.png",
+      "title": "колбаса полукопчёная охлаждённая «Донская»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-10.png",
+      "title": "\nколбаса варёная «докторская»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-11.png",
+      "title": "колбаса варено-копчёная охлаждённая «киевский сервелат»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-12.png",
+      "title": "\nщековина казачья"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-13.png",
+      "title": "\nколбасаварено-копченая копчёная охлаждённая салями «Экстра»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-14.png",
+      "title": "\nколбаса полукопчёная охлаждённая «Салями с сыром»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-15.png",
+      "title": "\nколбаса варено-копчёная охлаждённая «Московская»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-16.png",
+      "title": "\nсардельки говяжьи"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-17.png",
+      "title": "\nветчинный крем"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-18.png",
+      "title": "\nсосиски «Хотдог»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-19.png",
+      "title": "\nсосиски «Хотдог»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-20.png",
+      "title": "\nсосиски «Хотдог»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-21.png",
+      "title": "\nсосиски «Хотдог»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-3.png",
+      "title": "\nсосиски «Хотдог»"
+    }
+  ],
+  "digits": [
+    {
+      "number": "15",
+      "text": "категорий"
+    },
+    {
+      "number": "120",
+      "text": "позиций мясного ассортимента"
+    }
+  ],
+  "subProducts": [
+    {
+
+    },
+    {
+
+    }
+  ],
+  "halal": [
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    }
+  ],
+  "clipping": [
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    }
+  ]
+}

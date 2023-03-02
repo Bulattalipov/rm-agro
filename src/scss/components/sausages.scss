@@ -1,0 +1,452 @@
+.catalog {
+  padding-bottom: 15rem;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 7rem;
+  }
+
+  .section-filter {
+    padding-top: 5rem;
+    margin-bottom: 7rem;
+
+    @include breakpoint(tablet) {
+      padding-top: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-top: 2.6rem;
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__title {
+    display: none;
+
+    font: var(--regular) 25rem/75% var(--secondary-ff);
+    color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      display: block;
+      margin-bottom: 3rem;
+
+      font-size: 16rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 12rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 9rem;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.8rem;
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__filter-tags {
+    max-width: 109rem;
+    min-width: 0;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+
+    &--meat {
+      li.catalog__item {
+        grid-column: span 1;
+      }
+    }
+
+    li.catalog__item--menu {
+      grid-column: span 2;
+
+      @include breakpoint(small-tablet) {
+        grid-column: span 1;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+
+        .meat__item-icon {
+          transform: rotate(45deg);
+        }
+
+        .button {
+          span {
+            margin-right: 1rem;
+          }
+
+          svg {
+            transform: scaleX(1) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    min-height: 41.9rem;
+    
+    border-radius: 2rem;
+    background-color: #fff;
+
+    @include breakpoint(tablet) {
+      min-height: 35rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 30rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 21.7rem;
+
+      border-radius: 1.5rem;
+    }
+
+    &:nth-child(11n+1),
+    &:nth-child(7n+6),
+    &:nth-child(10n+8) {
+      grid-column: span 2;
+
+      @include breakpoint(small-tablet) {
+        grid-column: span 1;
+      }
+    }
+
+    &:nth-child(12n + 1){
+      .catalog__item-img {
+        background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%);
+      }
+    }
+
+    &:nth-child(12n + 2) {
+      .catalog__item-img {
+        background: radial-gradient(50% 109.44% at 54.12% 50%, #EBEDE2 0%, #CDD1BC 100%);
+      }
+    }
+
+    &:nth-child(12n + 3) {
+      .catalog__item-img {
+        background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #FFF0E8 0%, #E4CDC0 100%);
+      }
+    }
+
+    &:nth-child(12n + 4) {
+      .catalog__item-img {
+        background: radial-gradient(62.43% 62.43% at 50% 50%, #D8D8D8 0%, #CAC8D3 100%);
+      }
+    }
+
+    &:nth-child(12n + 5) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #E3D2A9 0%, #DFCA98 100%);
+      }
+    }
+
+    &:nth-child(12n + 6) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #DDE1F4 0%, #C9CFF1 100%);
+      }
+    }
+
+    &:nth-child(12n + 7){
+      .catalog__item-img {
+        background: radial-gradient(50% 109.44% at 54.12% 50%, #EBEDE2 0%, #CDD1BC 100%);
+      }
+    }
+
+    &:nth-child(12n + 8) {
+      .catalog__item-img {
+        background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%);
+      }
+    }
+
+    &:nth-child(12n + 9) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #E3D2A9 0%, #DFCA98 100%);
+      }
+    }
+
+    &:nth-child(12n + 10) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #E3D2A9 0%, #DFCA98 100%);
+      }
+    }
+
+    &:nth-child(12n + 11) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #DDE1F4 0%, #C9CFF1 100%);
+      }
+    }
+
+    &:nth-child(12n + 12) {
+      .catalog__item-img {
+        background: radial-gradient(50% 109.44% at 54.12% 50%, #EBEDE2 0%, #CDD1BC 100%);
+      }
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      .catalog__item-icon {
+        transform: rotate(45deg);
+      }
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+      padding: 1rem;
+    }
+  }
+
+  &__item-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33.6rem;
+
+    border-radius: 2rem;
+
+    @include breakpoint(tablet) {
+      height: 28rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 22rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 17rem;
+      border-radius: 1rem;
+    }
+
+    img {
+      width: 100%;
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+
+      transition: 0.3s;
+    }
+  }
+
+  &__item-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 0.7rem;
+    margin-top: auto;
+  }
+
+  &__item-title {
+    font: var(--text-t4);
+    text-transform: uppercase;
+    color: var(--title-color);
+  }
+
+  &__item-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+
+    transition: 0.3s;
+  }
+
+  &__menu-item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+    height: 100%;
+    padding: 3.5rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    color: #fff;
+
+    @include breakpoint(tablet) {
+      gap: 3.5rem;
+      padding: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 2.5rem;
+      padding: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.6rem;
+      padding: 2rem;
+
+      border-radius: 1.5rem;
+    }
+  }
+
+  &__menu-item-title {
+    font: var(--title-h3);
+    text-transform: uppercase;
+  }
+
+  &__menu-item-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.6rem 0.8rem;
+    margin-top: auto;
+  }
+
+  &__menu-item-digits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    max-width: 28rem;
+    margin-bottom: -2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: -1rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.2rem;
+      max-width: 17rem;
+    }
+  }
+
+  &__menu-item-digit {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+    }
+  }
+
+  &__menu-item-number {
+    font: var(--regular) 14rem/95% var(--secondary-ff);
+    letter-spacing: 0.03em;
+
+    @include breakpoint(tablet) {
+      font-size: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 9rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 6rem
+    }
+  }
+
+  &__menu-item-text {
+    margin-top: auto;
+    padding-bottom: 2.5rem;
+
+    font: var(--text-t4);
+
+    @include breakpoint(small-tablet) {
+      padding-bottom: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__menu-item-button {
+    span {
+      display: inline-block;
+      margin-top: 0.2rem;
+    }
+  }
+
+  .more-button {
+    margin-top: 7rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 3.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
+  }
+}

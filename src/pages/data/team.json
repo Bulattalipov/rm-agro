@@ -1,0 +1,108 @@
+{
+  "headerMod": "header--dark",
+  "breadcrumbs": [
+    {
+      "text": "Главная",
+      "href": "index.html"
+    },
+    {
+      "text": "Команда",
+      "href": "team.html",
+      "active": true
+    }
+  ],
+  "linksData": [
+    {
+      "href": "company.html",
+      "text": "О холдинге"
+    },
+    {
+      "href": "team.html",
+      "text": "наша команда",
+      "active": true
+    },
+    {
+      "href": "media.html",
+      "text": "медиагаллерея"
+    },
+    {
+      "href": "awards.html",
+      "text": "Награды и сертификаты"
+    }
+  ],
+  "team": [
+    {
+      "mod": "team__item--large",
+      "img": "img/team-1.jpg",
+      "text": "РМ Агро — компания, где можно начать или продолжить карьерный путь",
+      "title": "<span class='team__item-surname'>Мутигуллин</span> <span class='team__item-name'>Ринат Махмутович</span>",
+      "position": "Генеральный директор <span>Группы компаний «Родные места»</span>",
+      "initials": "Р.М"
+    },
+    {
+      "img": "img/team-2.jpg",
+      "title": "<span class='team__item-surname'>Барингольц</span> Игорь Михайлович",
+      "position": "Директор по стратегическому развитию"
+    },
+    {
+      "img": "img/team-3.jpg",
+      "title": "<span class='team__item-surname'>Ахлашев</span> Евгений Валерьевич",
+      "position": "Финансовый директор"
+    },
+    {
+      "img": "img/team-4.jpg",
+      "title": "<span class='team__item-surname'>Кисляков</span> Сергей Евгеньевич",
+      "position": "Финансовый директор"
+    },
+    {
+      "img": "img/team-5.jpg",
+      "title": "<span class='team__item-surname'>Жембровский</span> Никита Николаевич",
+      "position": "Коммерческий директор"
+    },
+    {
+      "img": "img/team-6.jpg",
+      "title": "<span class='team__item-surname'>Киселёв</span> Константин Николаевич",
+      "position": "Директор по производству"
+    },
+    {
+      "img": "img/team-7.jpg",
+      "title": "<span class='team__item-surname'>Фатыхов</span> Ильнур Раилевич",
+      "position": "Директор по молочному животноводству"
+    },
+    {
+      "img": "img/team-8.jpg",
+      "title": "<span class='team__item-surname'>Чмыхов</span> Станислав Николаевич",
+      "position": "Главный ветеринарный врач"
+    },
+    {
+      "img": "img/team-9.jpg",
+      "title": "<span class='team__item-surname'>Махмутов</span> Рифат Магсутович",
+      "position": "Управляющий элеватором"
+    },
+    {
+      "img": "img/team-10.jpg",
+      "title": "<span class='team__item-surname'>Кузнецов</span> Виктор Иванович",
+      "position": "Директор ООО «РМ СТРОЙ»"
+    },
+    {
+      "img": "img/team-11.jpg",
+      "title": "<span class='team__item-surname'>Юсупов</span> Ирек Камилевич",
+      "position": "Начальник службы безопасности"
+    },
+    {
+      "img": "img/team-12.jpg",
+      "title": "<span class='team__item-surname'>Гарипов</span> Ильдар Нурисламович",
+      "position": "Начальник технического отдела"
+    },
+    {
+      "img": "img/team-13.jpg",
+      "title": "<span class='team__item-surname'>Устякин</span> Алексей Григорьевич",
+      "position": "Начальник отдела логистики"
+    },
+    {
+      "img": "img/team-14.jpg",
+      "title": "<span class='team__item-surname'>Гизатуллин</span> Ансель Вакилевич",
+      "position": "Начальник отдела снабжения"
+    }
+  ]
+}

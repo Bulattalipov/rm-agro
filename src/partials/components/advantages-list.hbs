@@ -1,0 +1,10 @@
+<ul class="advantages-list">
+    {{#each data }}
+        <li class="advantages-list__item">
+            <h3 class="advantages-list__title">{{{this.title}}}</h3>
+            <div class="advantages-list__text">
+                <p>{{{this.text}}}</p>
+            </div>
+        </li>
+    {{/each}}
+</ul>

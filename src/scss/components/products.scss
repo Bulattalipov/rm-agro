@@ -1,0 +1,157 @@
+.products {
+  padding-bottom: 15rem;
+  background-color: #fff;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 9rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 7rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-left: 3.5rem;
+
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-left: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3.5rem;
+    height: 100%;
+    min-height: 53.9rem;
+
+    border-radius: 2rem;
+    background: var(--bg-color) url("../img/steaks.svg") no-repeat center;
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    @include breakpoint(tablet) {
+      padding: 3rem;
+      min-height: 35rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 22.6rem;
+      padding: 2rem;
+    }
+
+    &:hover {
+      background-color: var(--accent-color);
+
+      .products__item-title {
+        color: #FDFCFC;
+      }
+
+      .products__item-link {
+        width: var(--button-width);
+        padding: 0 1.5rem;
+      }
+
+      .products__item-img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__item-title {
+    max-width: 30rem;
+
+    font: var(--title-h3);
+    color: var(--title-color);
+    text-transform: uppercase;
+
+    transition: 0.3s;
+
+    @include breakpoint(tablet) {
+      max-width: 20rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      max-width: 15rem;
+    }
+  }
+
+  &__item-img {
+    position: absolute;
+    right: -10rem;
+    bottom: 6.5rem;
+
+    width: 56rem;
+    aspect-ratio: 560 / 409;
+
+    transition: 0.3s ease-out;
+
+    @include breakpoint(tablet) {
+      width: 40rem;
+      right: -15rem;
+      bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 50rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 40rem;
+      bottom: 1.4rem;
+    }
+  }
+
+  &__item-link {
+    width: 0;
+    padding: 0;
+
+    border: 0;
+    overflow: hidden;
+
+    color: var(--accent-color);
+    white-space: nowrap;
+
+    transition: 0.3s ease-out;
+
+    @include breakpoint(small-tablet) {
+      width: auto;
+      padding: 0 2rem;
+
+      background-color: var(--accent-color);
+
+      color: #fff;
+    }
+
+    &:hover {
+      border-color: #fff;
+      background-color: #fff;
+      color: var(--accent-color);
+    }
+  }
+
+  &__item-link-transparent {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+}

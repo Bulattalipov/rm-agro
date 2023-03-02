@@ -1,0 +1,110 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="vacancy">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                {{> main-titles firstLink='career.html' secondLink='vacancy.html' secondTitleMain=true title-1='Карьера' title-2='Вакансии' }}
+                {{> section-header title='открыто 10 вакансий' dot=true }}
+                <ul class="vacancy__list">
+                    {{#each vacancy }}
+                        <li class="vacancy__item">
+                            <div class="vacancy__item-content">
+                                <h3 class="vacancy__item-title">{{this.title}}</h3>
+                                <div class="vacancy__item-text">
+                                    <p>{{this.text}}</p>
+                                </div>
+                            </div>
+                            <div class="vacancy__item-price-block">
+                                <span class="vacancy__item-price">{{this.price}}</span>
+                                <a class="vacancy__item-link button button--green" href="#">
+                                    <span>Смотреть</span>
+                                    <img class="lazyload" data-src="img/hh-icon.png" alt="Иконка hh.ru">
+                                </a>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+                <button class="more-button button button--white">
+                    <span>показать больше</span>
+                    <svg>
+                        <use xlink:href="#link-arrow-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <section class="resume">
+            <div class="container">
+                <div class="resume__inner">
+                    <div class="resume__title-wrapper">
+                        <h2 class="resume__title">отправьте резюме</h2>
+                    </div>
+                    <div class="resume__wrapper">
+                        <form class="resume__form js-handle-form" action="#" data-need-validation="true" novalidate>
+                            <div class="resume__form-wrapper">
+                                <div class="resume__input-wrapper input-wrapper">
+                                    <input class="resume__input input" name="resumeName" id="resumeName"
+                                           type="text" required>
+                                    <label for="resumeName">Имя</label>
+                                </div>
+                                <div class="resume__input-wrapper input-wrapper">
+                                    <input class="resume__input input" name="resumeMail" id="resumeMail"
+                                           type="email" required>
+                                    <label for="resumeMail">Ваша почта</label>
+                                </div>
+                                <div class="resume__input-wrapper input-wrapper">
+                                    <input class="resume__input input js-phone-input" name="resumePhone"
+                                           id="resumePhone" type="tel" required>
+                                    <label for="resumePhone">номер телефона</label>
+                                </div>
+                                <div class="resume__file-wrapper input-wrapper js-input-file-container">
+                                    <input class="resume__file js-input-file visually-hidden" name="resumeFile" id="resumeFile" type="file" tabindex="-1">
+                                    <label class="resume__file-label label-file" for="resumeFile">
+                                        <span class="resume__file-desc">
+                                            <svg>
+                                                <use xlink:href="#clip-icon"></use>
+                                            </svg>
+                                            <span class="js-input-file-desc">Прикрепите свое резюме</span>
+                                        </span>
+                                        <span class="resume__file-name js-input-file-name"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="resume__checkbox-block">
+                                <div class="resume__checkbox-wrapper">
+                                    <input class="resume__checkbox checkbox" name="resumeCheckbox"
+                                           id="resumeCheckbox"
+                                           type="checkbox" required>
+                                    <label for="resumeCheckbox">
+                                        <span>Согласен на обработку<a href="#" download>&nbsp;персональных данных</a></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="resume__button button button--white js-submit-form" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="resume__content">
+                            <div class="resume__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить
+                                    в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="resume__links">
+                                <a class="resume__link link link--white" href="tel:+79061201515">+7 (906)
+                                    120-15-15</a>
+                                <a class="resume__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

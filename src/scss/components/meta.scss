@@ -1,0 +1,33 @@
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  &__tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    padding: 0 1rem;
+
+    border-radius: 2rem;
+    border: 1px solid var(--stroke-color);
+
+    font: var(--text-t3);
+    font-weight: 500;
+    color: var(--title-color);
+
+    @include breakpoint(small-tablet) {
+      height: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 2.6rem;
+    }
+  }
+
+  &__date {
+    font: var(--text-t4);
+    font-variant-numeric: lining-nums;
+  }
+}

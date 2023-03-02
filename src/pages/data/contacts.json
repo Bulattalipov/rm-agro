@@ -1,0 +1,30 @@
+{
+  "headerMod": "header--dark",
+  "breadcrumbs": [
+    {
+      "text": "Главная",
+      "href": "index.html"
+    },
+    {
+      "text": "Контакты",
+      "href": "contacts.html",
+      "active": true
+    }
+  ],
+  "contacts": [
+    {
+      "title": "АДРЕС",
+      "text": "422191, РТ, Мамадыш, ул. Дачная, д. 6а"
+    },
+    {
+      "title": "ОТДЕЛ КАДРОВ",
+      "href": "tel:+78556335237",
+      "text": "+7 (85563) 3–52–37"
+    },
+    {
+      "title": "отдел продаж",
+      "href": "tel:+79061201515",
+      "text": "+7 906 120-15-15"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+.download-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 37.7rem;
+  padding: 2.2rem 1.8rem 2.2rem 2.5rem;
+
+  border-radius: 2rem;
+  background-color: var(--light-bg-color);
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #fff;
+  }
+  
+  @include breakpoint(mobile) {
+    padding: 1.4rem 2rem;
+    border-radius: 1.5rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  &__text {
+    font: var(--text-t4);
+    color: var(--title-color);
+    text-transform: uppercase;
+  }
+
+  &__size {
+    font: var(--text-t5);
+    font-variant-numeric: lining-nums;
+    color: var(--text-color);
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background-color: var(--bg-color);
+
+
+    @include breakpoint(mobile) {
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+
+    img {
+      width: 2.8rem;
+      height: 2.8rem;
+    }
+  }
+}

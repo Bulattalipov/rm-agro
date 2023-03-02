@@ -1,0 +1,84 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="awards">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                {{> links-list data=linksData mod='links-list--green' }}
+                <h1 class="awards__title">Награды</h1>
+                <ul class="awards__list">
+                    {{#each awards }}
+                        <li class="awards__item">
+                            <div class="awards__item-img">
+                                <img src="{{this.img}}" data-src="{{this.img}}" data-fancybox="awards" alt="Фото награды">
+                            </div>
+                            <h3 class="awards__item-title">{{this.title}}</h3>
+                            <div class="awards__item-text">
+                                <p>{{this.text}}</p>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+                <button class="more-button button button--white">
+                    <span>показать больше</span>
+                    <svg>
+                        <use xlink:href="#link-arrow-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-section__inner">
+                    <div class="contacts-section__title-wrapper">
+                        <h2 class="contacts-section__title">связаться с&nbsp;нами</h2>
+                    </div>
+                    <div class="contacts-section__wrapper">
+                        <form class="contacts-section__form js-handle-form" action="#" data-need-validation="true" novalidate>
+                            <div class="contacts-section__form-wrapper">
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input" name="contactsName" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <textarea class="contacts-section__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
+                            </div>
+                            <div class="contacts-section__checkbox-block">
+                                <div class="contacts-section__checkbox-wrapper">
+                                    <input class="contacts-section__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox"> <span>Согласен на обработку<a href="#" download>&nbsp;персональных данных</a></span></label>
+                                </div>
+                            </div>
+                            <button class="contacts-section__button button button--white js-submit-form" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="contacts-section__content">
+                            <div class="contacts-section__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="contacts-section__links">
+                                <a class="contacts-section__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts-section__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

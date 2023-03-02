@@ -1,0 +1,58 @@
+{
+  "headerMod": "header--dark",
+  "breadcrumbs": [
+    {
+      "text": "Главная",
+      "href": "index.html"
+    },
+    {
+      "text": "Направления деятельности",
+      "href": "directions.html",
+      "active": true
+    }
+  ],
+  "directions": [
+    {
+      "bg": "img/wheat.svg",
+      "color": "#395937",
+      "img": "img/directions-1.jpg",
+      "imgWebp": "img/directions-1.webp",
+      "text": "Растениеводство"
+    },
+    {
+      "bg": "img/directions-bg-2.svg",
+      "color": "#DCC7A5",
+      "img": "img/directions-2.jpg",
+      "imgWebp": "img/directions-2.webp",
+      "text": "животнодводство"
+    },
+    {
+      "bg": "img/directions-bg-3.svg",
+      "color": "#6B9AD8",
+      "img": "img/directions-3.jpg",
+      "imgWebp": "img/directions-3.webp",
+      "text": "Молочное<br> производство"
+    },
+    {
+      "bg": "img/directions-bg-4.svg",
+      "color": "#CF5A3D",
+      "img": "img/directions-4.jpg",
+      "imgWebp": "img/directions-4.webp",
+      "text": "Производство<br> колбас и деликатесов"
+    },
+    {
+      "bg": "img/directions-bg-5.svg",
+      "color": "#DBAE56",
+      "img": "img/directions-5.jpg",
+      "imgWebp": "img/directions-5.webp",
+      "text": "забой скота"
+    },
+    {
+      "bg": "img/directions-bg-6.svg",
+      "color": "#4F5372",
+      "img": "img/directions-1.jpg",
+      "imgWebp": "img/directions-1.webp",
+      "text": "ГРК «АПРЕЛЬ»"
+    }
+  ]
+}

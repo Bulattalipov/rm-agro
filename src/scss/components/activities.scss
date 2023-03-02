@@ -1,0 +1,16 @@
+.activities {
+  padding: 12rem 0 15rem;
+  background-color: #fff;
+
+  @include breakpoint(tablet) {
+    padding: 9rem 0 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 7rem 0 10rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 5rem 0 7rem;
+  }
+}

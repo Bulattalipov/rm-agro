@@ -1,0 +1,165 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="career__intro">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                {{> main-titles firstLink='career.html' secondLink='vacancy.html' firstTitleMain=true title-1='Карьера' title-2='Вакансии' }}
+                {{> section-header title='работа в рм агро' dot=true }}
+            </div>
+            <div class="narrow-container">
+                <h2>Главная ценность нашей компании — это&nbsp;команда из 13 000 квалифицированных и преданных своему делу
+                    сотрудников</h2>
+                <p>
+                    Мы создаём новые рабочие места, обеспечиваем стабильную занятость, достойную заработную плату,
+                    социальные гарантии и предоставляем возможности для профессионального роста, соблюдаем трудовое
+                    законодательство и стандарты.
+                </p>
+                <p>
+                    Мы создаём новые рабочие места, обеспечиваем стабильную занятость, достойную заработную плату,
+                    социальные гарантии и предоставляем возможности для профессионального роста, соблюдаем трудовое
+                    законодательство и стандарты.
+                </p>
+                {{> numbers-slider data=numbers }}
+            </div>
+        </section>
+        <section class="career__skill">
+            <div class="container">
+                {{> section-header title='повышение квалификации' }}
+                <div class="career__skill-wrapper">
+                    <div class="career__skill-top">
+                        <h3 class="career__skill-title">Обучение молодых специалистов</h3>
+                        {{> link-block buttonMod='button--green' buttonText='подробнее' text='Пашня, молочно-товарные фермы и мясоперерабатывающий комбинат построены в Мамадышском районе Республики Татарстан. Непосредственная близость объектов и производство полного цикла упрощают обработку данных для максимально продуктивной работы всех составляющих холдинга.' }}
+                    </div>
+                    <div class="career__skill-img">
+                        <img class="lazyload" data-src="img/career-1.jpg" alt="Фото">
+                    </div>
+                    <div class="career__skill-bottom">
+                        <div class="career__skill-bottom-img-block">
+                            <div class="career__skill-bottom-img">
+                                <img class="lazyload" data-src="img/career-2.jpg" alt="Фото">
+                            </div>
+                        </div>
+                        <div class="career__skill-bottom-content">
+                            <h3 class="career__skill-title">Повышение квалификации</h3>
+                            <div class="career__skill-bottom-text">
+                                <p>
+                                    Пашня, молочно-товарные фермы и мясоперерабатывающий комбинат построены
+                                    в Мамадышском районе Республики Татарстан. Непосредственная близость объектов
+                                    и производство полного цикла упрощают обработку данных для максимально продуктивной
+                                    работы всех составляющих холдинга.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="career__success">
+            <div class="container">
+                {{> section-header title='история успеха' }}
+                <div class="career__success-slider swiper">
+                    <div class="swiper-wrapper">
+                        {{#each success }}
+                            <div class="career__success-slide swiper-slide">
+                                <div class="career__success-img-column">
+                                    <div class="career__success-img">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото сотрудника">
+                                    </div>
+                                    <span class="career__success-name">{{{this.name}}}</span>
+                                    <span class="career__success-position">{{this.position}}</span>
+                                </div>
+                                <div class="career__success-content">
+                                    <h3 class="career__success-title">{{this.title}}</h3>
+                                    <div class="career__success-quote">
+                                        <p>{{this.quote}}</p>
+                                    </div>
+                                    <div class="career__success-text-block">
+                                        <div class="career__success-text">
+                                            <p>{{this.text}}</p>
+                                        </div>
+                                        <div class="career__success-hidden-text hide">
+                                            <p>{{this.text}}</p>
+                                        </div>
+                                    </div>
+                                    <button class="career__success-button">
+                                        <span>Читать полностью</span>
+                                        <img class="lazyload" data-src="img/down-arrow.svg" alt="Иконка">
+                                    </button>
+                                </div>
+                            </div>
+                        {{/each}}
+                    </div>
+                    {{> slider-navigation mod='slider-navigation--green' }}
+                </div>
+            </div>
+        </section>
+        <section class="career__care">
+            <div class="container">
+                {{> section-header title='мы заботимся о вас' dot=true }}
+                <div class="career__care-wrapper">
+                    {{> advantages-list data=care }}
+                    <a class="career__care-button button button--white" href="vacancy.html">
+                        <span>смотреть вакансии</span>
+                        <svg>
+                            <use xlink:href="#link-arrow-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-section__inner">
+                    <div class="contacts-section__title-wrapper">
+                        <h2 class="contacts-section__title">связаться с&nbsp;нами</h2>
+                    </div>
+                    <div class="contacts-section__wrapper">
+                        <form class="contacts-section__form js-handle-form" action="#" data-need-validation="true" novalidate>
+                            <div class="contacts-section__form-wrapper">
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input" name="contactsName" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <input class="contacts-section__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts-section__input-wrapper input-wrapper">
+                                    <textarea class="contacts-section__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
+                            </div>
+                            <div class="contacts-section__checkbox-block">
+                                <div class="contacts-section__checkbox-wrapper">
+                                    <input class="contacts-section__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox"> <span>Согласен на обработку<a href="#" download>&nbsp;персональных данных</a></span></label>
+                                </div>
+                            </div>
+                            <button class="contacts-section__button button button--white js-submit-form" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="contacts-section__content">
+                            <div class="contacts-section__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="contacts-section__links">
+                                <a class="contacts-section__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts-section__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}

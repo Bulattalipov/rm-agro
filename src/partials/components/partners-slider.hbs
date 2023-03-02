@@ -1,0 +1,30 @@
+<div class="partners-slider">
+    <div class="partners-slider__block">
+        <h3 class="partners-slider__title">Федерального уровня</h3>
+        <div class="partners-slider__slider swiper">
+            <div class="swiper-wrapper">
+                {{#each partners }}
+                    <div class="partners-slider__slide swiper-slide">
+                        <a href="#">
+                            <img class="lazyload" data-src="{{this.img}}" alt="Фото партнера">
+                        </a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="partners-slider__block">
+        <h3 class="partners-slider__title">Локальные и региональные</h3>
+        <div class="partners-slider__slider swiper" data-reverse="true">
+            <div class="swiper-wrapper">
+                {{#each partners }}
+                    <div class="partners-slider__slide swiper-slide">
+                        <a href="#">
+                            <img class="lazyload" data-src="{{this.img}}" alt="Фото партнера">
+                        </a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

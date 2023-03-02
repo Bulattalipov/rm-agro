@@ -1,0 +1,16 @@
+<div class="main-titles">
+    <div class="main-titles__links">
+        <a class="main-titles__link button button--green{{#if firstTitleMain }} active{{/if}}" href="{{firstLink}}">
+            <span>{{this.title-1}}</span>
+        </a>
+        <a class="main-titles__link button button--green{{#if secondTitleMain }} active{{/if}}" href="{{secondLink}}">
+            <span>{{this.title-2}}</span>
+        </a>
+    </div>
+    {{#if firstTitleMain }} <h1 class="main-titles__title main-titles__title--active">{{else}} <h2 class="main-titles__title"> {{/if}}
+        <a href="{{firstLink}}">{{this.title-1}}</a>
+    {{#if firstTitleMain }} </h1> {{else}} </h2> {{/if}}
+    {{#if secondTitleMain }} <h1 class="main-titles__title main-titles__title--active">{{else}} <h2 class="main-titles__title"> {{/if}}
+        <a href="{{secondLink}}">{{this.title-2}}</a>
+    {{#if secondTitleMain }} </h1> {{else}} </h2> {{/if}}
+</div>
